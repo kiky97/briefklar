@@ -35,13 +35,20 @@ A web app that turns a letter into an action-oriented explanation in the user's 
 - whether the grounding check caught invented dates or amounts
 - whether the judge model agrees with the automatic metrics; for low-resource languages, the judge's own reading ability is a limitation
 
-## 6. Limitations and next steps
+## 6. Deployment architecture (Track 2B)
+
+The app reaches Apertus only through a configurable OpenAI-compatible URL and makes no other outbound requests, so the same code runs in all three architectures. See DEPLOYMENT.md.
+
+- **a) On-premise / b) Air-gapped** (primary): `docker-compose.yml` runs the app and vLLM serving local Apertus weights, with offline flags set and no external assets.
+- **c) Sovereign Swiss cloud**: TODO: name the provider used during development or demo, its operating legal entity and jurisdiction, its data-centre location (e.g. Zurich), and its retention policy, with a link to the provider's documentation.
+
+## 7. Limitations and next steps
 
 - OCR for photographed letters (currently text and PDFs with a text layer)
 - A small synthetic test set; a next step is co-designing test letters with migrant counselling services
 - Human evaluation by native speakers of low-resource languages
 - Not legal advice; the UI says so and flags unverified facts
 
-## 7. Timeline
+## 8. Timeline
 
 Project started during the hackathon (see git history from the first commit).

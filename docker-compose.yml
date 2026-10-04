@@ -1,0 +1,46 @@
+# Self-hosted stack: the web app + Apertus served by vLLM on the same host.
+# Works on-premise and air-gapped (no outbound network at runtime) - see DEPLOYMENT.md.
+#
+#   1. Put the Apertus weights in ./models/apertus (downloaded beforehand, see DEPLOYMENT.md)
+#   2. docker compose up -d
+#   3. Open http://<host>:8000
+
+services:
+  apertus:
+    image: vllm/vllm-openai:latest   # pin a tested version for production
+    command: >
+      --model /models/apertus
+      --served-model-name apertus
+      --max-model-len 16384
+      --port 8001
+    volumes:
+      - ./models:/models:ro
+    environment:
+      HF_HUB_OFFLINE: "1"
+      TRANSFORMERS_OFFLINE: "1"
+      VLLM_NO_USAGE_STATS: "1"
+      DO_NOT_TRACK: "1"
+    ipc: host
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              count: all
+              capabilities: [gpu]
+    networks: [internal]
+
+  app:
+    build: .
+    depends_on: [apertus]
+    environment:
+      APERTUS_BASE_URL: http://apertus:8001/v1
+      APERTUS_API_KEY: local
+      APERTUS_MODEL: apertus
+      MOCK_LLM: "0"
+    ports:
+      - "8000:8000"
+    networks: [internal]
+
+networks:
+  internal: {}

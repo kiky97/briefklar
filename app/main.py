@@ -1,4 +1,5 @@
 import io
+import os
 from pathlib import Path
 
 from fastapi import Depends, FastAPI, File, HTTPException, UploadFile
@@ -11,7 +12,15 @@ from .llm import get_llm
 from .schemas import AnalyzeRequest, AnalyzeResponse, AskRequest, Facts, ReplyRequest, TextResponse
 
 STATIC = Path(__file__).parent / "static"
-app = FastAPI(title="Apertus Letter Helper")
+# Swagger UI loads its assets from a public CDN, so it is off by default to keep the
+# app free of outbound requests (air-gapped deployments). Enable with ENABLE_API_DOCS=1.
+_docs = os.getenv("ENABLE_API_DOCS", "").lower() in ("1", "true", "yes")
+app = FastAPI(
+    title="Apertus Letter Helper",
+    docs_url="/docs" if _docs else None,
+    redoc_url="/redoc" if _docs else None,
+    openapi_url="/openapi.json" if _docs else None,
+)
 
 
 def _llm_errors(fn):

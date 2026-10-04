@@ -53,6 +53,10 @@ Metrics:
 
 Results are written to `eval/results/`.
 
+## Deployment
+
+The app runs on-premise, air-gapped, or on a sovereign Swiss cloud. It makes no outbound requests besides the configured Apertus endpoint. See [DEPLOYMENT.md](DEPLOYMENT.md) and `docker-compose.yml` (app + vLLM with local Apertus weights).
+
 ## Tests
 
 ```bash

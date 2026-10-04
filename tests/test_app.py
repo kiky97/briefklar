@@ -82,3 +82,10 @@ def test_api_flow(client):
     ics = client.post("/api/ics", json=facts)
     assert ics.status_code == 200 and "DTSTART;VALUE=DATE:20261031" in ics.text
     assert client.get("/").status_code == 200
+
+
+def test_no_external_assets(client):
+    # Air-gapped requirement: Swagger (CDN-loaded) is off and the page loads nothing remote.
+    assert client.get("/docs").status_code == 404
+    html = client.get("/").text
+    assert "<script src=" not in html and "<link" not in html and "@import" not in html

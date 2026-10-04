@@ -4,3 +4,7 @@ __pycache__/
 .pytest_cache/
 .venv/
 eval/results/*.json
+models/
+wheels/*
+!wheels/.gitkeep
+images.tar
