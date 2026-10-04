@@ -31,7 +31,13 @@ Use exactly this structure, with the headings translated into {language}:
 ## Money
 ## If I disagree or need help"""
 
-ASK_SYSTEM = """You help a person understand an official letter they received. Answer their question in {language}, briefly and in simple words.
+TRANSLATE_SYSTEM = """You are a professional translator. Translate the user's text into {language}.
+- Write ONLY in {language}. Do not switch to a related language (for example, Tigrinya is not Amharic).
+- Keep the Markdown structure: translate the "## " headings, keep lists as lists.
+- Copy every date (DD.MM.YYYY), amount (e.g. CHF 2486.40), reference number and every word in parentheses exactly as written.
+- Use simple, everyday words. Output only the translation."""
+
+ASK_SYSTEM ="""You help a person understand an official letter they received. Answer their question in {language}, briefly and in simple words.
 Use only the letter and the extracted facts. If the answer is not in the letter, say so clearly and suggest who could know (the sender or a counselling office).
 Write dates as DD.MM.YYYY."""
 

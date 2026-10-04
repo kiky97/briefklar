@@ -20,6 +20,7 @@ class ApertusLLM:
             base_url=settings.base_url,
             api_key=settings.api_key or "missing-key",
             timeout=180,
+            max_retries=6,  # backs off on 429s (hackathon endpoint: 5 parallel requests per key)
             default_headers={"User-Agent": "apertus-letter-helper/0.1"},
         )
 
@@ -65,6 +66,8 @@ class MockLLM:
             for a in facts.get("amounts", []):
                 lines.append(f"- {a['currency']} {a['value']:.2f}")
             return "\n".join(lines)
+        if task == "translate":
+            return user
         if task == "judge":
             return json.dumps(
                 {"translation_en": "(mock)", "dates_correct": True, "amounts_correct": True,

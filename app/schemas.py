@@ -47,6 +47,7 @@ class Facts(BaseModel):
 class AnalyzeRequest(BaseModel):
     letter: str = Field(min_length=20)
     language: str = "English"
+    strategy: Literal["direct", "pivot"] = "pivot"
 
 
 class AnalyzeResponse(BaseModel):

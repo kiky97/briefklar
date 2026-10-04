@@ -66,7 +66,7 @@ async def upload(file: UploadFile = File(...)):
 def analyze(req: AnalyzeRequest, llm=Depends(get_llm)):
     def run():
         facts = pipeline.extract_facts(llm, req.letter)
-        return AnalyzeResponse(facts=facts, explanation=pipeline.explain(llm, req.letter, facts, req.language))
+        return AnalyzeResponse(facts=facts, explanation=pipeline.explain(llm, req.letter, facts, req.language, req.strategy))
 
     return _llm_errors(run)
 

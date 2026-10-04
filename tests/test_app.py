@@ -28,6 +28,33 @@ def test_swiss_amounts_and_foreign_digits():
     assert normalize_digits("٣٠.١١.٢٠٢٦") == "30.11.2026"
 
 
+def test_english_formats_from_model_output():
+    assert {date(2026, 10, 28)} == find_dates("by October 28, 2026")
+    assert {1150.0, 73.30} <= find_amounts("CHF 1,150.00 plus CHF 73.30")
+    assert 120.5 in find_amounts("Fr. 120,50")
+
+
+def test_dates_to_dmy_and_language_labels():
+    from app.grounding import dates_to_dmy
+    from app.languages import label
+
+    assert dates_to_dmy("Pay by November 30, 2026 or 12 November 2026.") == "Pay by 30.11.2026 or 12.11.2026."
+    assert label("Tigrinya") == "Tigrinya (ትግርኛ)"
+    assert label("English") == "English" and label("Klingon") == "Klingon"
+
+
+def test_langcheck_tells_tigrinya_from_amharic():
+    from eval.langcheck import check_language
+
+    amharic = "ይህ ደብዳቤ ምን ነው? እስከ 31.10.2026 ድረስ ክፍያውን ያድርጉ። አስፈላጊ ቀናት"
+    tigrinya = "እዚ እንታይ ደብዳቤ እዩ? ክሳብ 31.10.2026 ናይ CHF 120.00 ክትኸፍል ኣለካ።"
+    assert check_language(amharic, "Tigrinya")["detected"] == "amharic"
+    assert not check_language(amharic, "Tigrinya")["language_ok"]
+    assert check_language(tigrinya, "Tigrinya")["language_ok"]
+    assert check_language("Це податковий рахунок (Einsprache)", "Ukrainian")["language_ok"]
+    assert not check_language("This is a tax bill", "Ukrainian")["language_ok"]
+
+
 def test_parse_json_tolerates_fences_and_prose():
     assert pipeline.parse_json('```json\n{"a": 1}\n```') == {"a": 1}
     assert pipeline.parse_json('Here you go: {"a": 1} hope it helps') == {"a": 1}

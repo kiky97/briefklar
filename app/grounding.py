@@ -32,7 +32,10 @@ _ISO_DATE = re.compile(r"(?<!\d)(\d{4})-(\d{1,2})-(\d{1,2})(?!\d)")
 _NAMED_DATE = re.compile(
     rf"(?<!\d)(\d{{1,2}})(?:er|\.|º|°)?\s+({_MONTH_ALT})\s+(\d{{4}})(?!\d)", re.IGNORECASE
 )
-_NUMBER = re.compile(r"(?<![\d])(\d{1,3}(?:['’ ]\d{3})+|\d+)(?:[.,](\d{1,2}))?(?!\d)")
+_EN_DATE = re.compile(rf"\b({_MONTH_ALT})\s+(\d{{1,2}}),?\s+(\d{{4}})(?!\d)", re.IGNORECASE)
+# Swiss 2'486.40, spaced 2 486.40, English 1,150.00, plain 120 / 120,50
+_NUMBER = re.compile(r"(?<![\d])(\d{1,3}(?:['’ ]\d{3})+|\d{1,3}(?:,\d{3})+|\d+)(?:[.,](\d{1,2}))?(?!\d)")
+_THOUSANDS = re.compile(r"['’ ,]")
 
 
 def normalize_digits(text: str) -> str:
@@ -65,6 +68,8 @@ def parse_date(value: str) -> date | None:
         return _safe_date(int(m[3]), int(m[2]), int(m[1]))
     if m := _NAMED_DATE.fullmatch(value):
         return _safe_date(int(m[3]), MONTHS[m[2].lower()], int(m[1]))
+    if m := _EN_DATE.fullmatch(value):
+        return _safe_date(int(m[3]), MONTHS[m[1].lower()], int(m[2]))
     return None
 
 
@@ -80,27 +85,45 @@ def find_dates(text: str) -> set[date]:
     for m in _NAMED_DATE.finditer(text):
         if d := _safe_date(int(m[3]), MONTHS[m[2].lower()], int(m[1])):
             found.add(d)
+    for m in _EN_DATE.finditer(text):
+        if d := _safe_date(int(m[3]), MONTHS[m[1].lower()], int(m[2])):
+            found.add(d)
     return found
+
+
+_EN_MONTHS = "january|february|march|april|may|june|july|august|september|october|november|december"
+_EN_MDY = re.compile(rf"\b({_EN_MONTHS})\s+(\d{{1,2}})(?:st|nd|rd|th)?,?\s+(\d{{4}})(?!\d)", re.IGNORECASE)
+_EN_DMY = re.compile(rf"(?<!\d)(\d{{1,2}})(?:st|nd|rd|th)?\s+(?:of\s+)?({_EN_MONTHS}),?\s+(\d{{4}})(?!\d)", re.IGNORECASE)
+
+
+def dates_to_dmy(text: str) -> str:
+    """Rewrite English-style dates ('November 30, 2026', '30 November 2026') as 30.11.2026.
+
+    Applied to English model output so dates survive translation unchanged and match
+    the format printed on Swiss letters.
+    """
+    def fmt(y, m, d, original):
+        dt = _safe_date(int(y), MONTHS[m.lower()], int(d))
+        return f"{dt:%d.%m.%Y}" if dt else original
+
+    text = _EN_MDY.sub(lambda m: fmt(m[3], m[1], m[2], m[0]), text)
+    return _EN_DMY.sub(lambda m: fmt(m[3], m[2], m[1], m[0]), text)
+
+
+def _to_float(m: re.Match) -> float:
+    cents = (m[2] or "0").ljust(2, "0")
+    return round(float(f"{_THOUSANDS.sub('', m[1])}.{cents}"), 2)
 
 
 def parse_amount(value) -> float | None:
     if isinstance(value, (int, float)):
         return float(value)
     m = _NUMBER.search(normalize_digits(str(value)))
-    if not m:
-        return None
-    whole = re.sub(r"['’ ]", "", m[1])
-    cents = m[2] or "0"
-    return float(f"{whole}.{cents}")
+    return _to_float(m) if m else None
 
 
 def find_amounts(text: str) -> set[float]:
-    text = normalize_digits(text)
-    amounts = set()
-    for m in _NUMBER.finditer(text):
-        whole = re.sub(r"['’ ]", "", m[1])
-        amounts.add(round(float(f"{whole}.{m[2] or '0'}"), 2))
-    return amounts
+    return {_to_float(m) for m in _NUMBER.finditer(normalize_digits(text))}
 
 
 def amount_in(value: float, amounts: set[float]) -> bool:

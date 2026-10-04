@@ -2,7 +2,8 @@ import json
 import re
 
 from . import prompts
-from .grounding import amount_in, find_amounts, find_dates, parse_amount, parse_date
+from .grounding import amount_in, dates_to_dmy, find_amounts, find_dates, parse_amount, parse_date
+from .languages import label
 from .schemas import DATE_KINDS, LETTER_TYPES, Amount, ChatTurn, Facts, KeyDate
 
 
@@ -83,17 +84,42 @@ def _facts_json(facts: Facts) -> str:
     return facts.model_dump_json(exclude={"warnings"}, indent=1)
 
 
-def explain(llm, letter: str, facts: Facts, language: str) -> str:
+STRATEGIES = ("direct", "pivot")
+
+
+def explain(llm, letter: str, facts: Facts, language: str, strategy: str = "pivot") -> str:
+    """Explain the letter in `language`.
+
+    direct: one call that writes the explanation in the target language.
+    pivot:  write it in English, normalize dates to DD.MM.YYYY in code, then translate
+            it in a separate, focused call. REPORT.md compares both strategies.
+    The target language is always named natively too, e.g. "Tigrinya (ትግርኛ)".
+    """
+    is_english = language.strip().lower() == "english"
+    target = "English" if strategy == "pivot" else label(language)
     messages = [
-        {"role": "system", "content": prompts.EXPLAIN_SYSTEM.format(language=language)},
+        {"role": "system", "content": prompts.EXPLAIN_SYSTEM.format(language=target)},
         {"role": "user", "content": prompts.facts_block(_facts_json(facts), letter)},
     ]
-    return llm.chat(messages, task="explain").strip()
+    text = llm.chat(messages, task="explain").strip()
+    if target == "English":
+        text = dates_to_dmy(text)
+    if strategy == "pivot" and not is_english:
+        text = translate(llm, text, language)
+    return text
+
+
+def translate(llm, text: str, language: str) -> str:
+    messages = [
+        {"role": "system", "content": prompts.TRANSLATE_SYSTEM.format(language=label(language))},
+        {"role": "user", "content": text},
+    ]
+    return llm.chat(messages, task="translate", temperature=0.0).strip()
 
 
 def ask(llm, letter: str, facts: Facts, language: str, question: str, history: list[ChatTurn]) -> str:
     messages = [
-        {"role": "system", "content": prompts.ASK_SYSTEM.format(language=language)},
+        {"role": "system", "content": prompts.ASK_SYSTEM.format(language=label(language))},
         {"role": "user", "content": prompts.facts_block(_facts_json(facts), letter)},
         {"role": "assistant", "content": "I have read the letter. What would you like to know?"},
     ]
@@ -104,7 +130,7 @@ def ask(llm, letter: str, facts: Facts, language: str, question: str, history: l
 
 def draft_reply(llm, letter: str, facts: Facts, language: str, intent: str) -> str:
     messages = [
-        {"role": "system", "content": prompts.REPLY_SYSTEM.format(language=language)},
+        {"role": "system", "content": prompts.REPLY_SYSTEM.format(language=label(language))},
         {"role": "user", "content": prompts.facts_block(_facts_json(facts), letter) + f"\n\nWHAT I WANT TO SAY:\n{intent}"},
     ]
     return llm.chat(messages, task="reply").strip()
