@@ -36,11 +36,13 @@ The app keeps no state and writes no letters to disk. Its only outbound connecti
 
 ### Target architecture (mandatory)
 
-BriefKlar is deployable as **a) on-premise** and **b) air-gapped**, and the same images run on **c) a sovereign Swiss cloud**. Details are in [`docs/DEPLOYMENT.md`](docs/DEPLOYMENT.md).
+**Target: a) On-premise.** BriefKlar runs entirely on the organisation's own infrastructure, for example a migrant counselling service, a municipality or a cantonal office, under its own administration:
 
-- **a) On-premise:** `make run-local` starts the app and vLLM serving Apertus v1.5 from local weights (`models/apertus`) on the organisation's own GPU host.
-- **b) Air-gapped:** the same stack with `HF_HUB_OFFLINE=1`, `TRANSFORMERS_OFFLINE=1` and vLLM usage stats disabled. The web page loads no CDN assets or fonts (a unit test checks this), and Swagger UI is off. Wheels, images and weights are prepared beforehand and copied in.
-- **c) Sovereign Swiss cloud:** run the same compose file on a Swiss-operated GPU VM, or run only the app (`make run`) and point `LLM_BASE_URL` at a Swiss-hosted Apertus endpoint. During development we used the Hack Apertus inference endpoint. `TODO: confirm operator / jurisdiction / data-centre location with the organisers before claiming (c) for it.`
+- **Everything is containerised.** `make run-local` starts two containers on the organisation's own GPU host: the BriefKlar app, and vLLM serving Apertus v1.5 from local weights (`models/apertus`, downloaded once from Hugging Face). Docs: [`docs/DEPLOYMENT.md`](docs/DEPLOYMENT.md).
+- **Letters never leave the organisation.** The app's only outbound connection is `LLM_BASE_URL`, which on-premise points to the local vLLM container. The web page loads no CDN assets or fonts (a unit test checks this), Swagger UI is off, and no letter is written to disk.
+- **Open weights make this possible.** Apertus can be self-hosted without a licence server or vendor API, so the organisation controls the model version, updates and logs.
+
+The same setup also works offline (b), with offline flags already set in the compose file, and can be moved to a Swiss-operated cloud VM (c). We claim only (a).
 
 **External dependencies**
 
@@ -48,8 +50,10 @@ BriefKlar is deployable as **a) on-premise** and **b) air-gapped**, and the same
 |---|---|---|
 | Python packages (FastAPI, openai, pydantic, pypdf, ...) | PyPI or pre-downloaded wheels | — |
 | Base images | `python:3.11-slim`, `vllm/vllm-openai` | — |
-| Model weights | Hugging Face `swiss-ai/Apertus-v1.5-8B` / `-70B` | local files (a, b) |
-| Inference | — | `LLM_BASE_URL` only |
+| Model weights | Hugging Face `swiss-ai/Apertus-v1.5-8B` / `-70B` | local files |
+| Inference | — | `LLM_BASE_URL` only (on-premise: the local vLLM container) |
+
+During the hackathon, all results were produced through the Hack Apertus hosted endpoint (`make run`). The on-premise configuration only changes `LLM_BASE_URL`.
 
 ## 3. Use of Apertus
 
@@ -126,6 +130,7 @@ Structure compliance was 1.00 in all cells of the final runs. Extraction takes a
 - **Secondary facts are sometimes missed**, e.g. expiry dates and side fees. Deadlines were always found, but the UI should invite users to check the original letter.
 - **Latency.** Pivot plus translation takes about 2× as long; a Tigrinya explanation takes about 43 s.
 - **The direct-strategy run used the 1,500-token limit before the truncation fix.** Its language-drift result is unaffected, because drift is visible from the first sentence.
+- **The on-premise path was not run end-to-end.** `make run-local` (vLLM on a local GPU) was checked for configuration and Makefile syntax only; no GPU was available during the hackathon. The app container itself was tested with `make run`, `make demo` and `make test`.
 - **Not legal advice.** The UI says so and flags unverified facts.
 
 ## 7. Reproducibility
