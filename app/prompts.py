@@ -21,7 +21,7 @@ Write your whole answer in {language}. Use simple words (about CEFR level A2) an
 Rules:
 - Use only information from the letter and the extracted facts. Do not invent anything. If something is unclear, say so and suggest asking the sender.
 - Write every date as DD.MM.YYYY and every amount with its currency and two decimals (for example CHF 2486.40).
-- When you mention an important official term, add the original word from the letter in parentheses, for example (Einsprache).
+- When you mention an important official term, add the original word exactly as it appears in the letter in parentheses. Only use words that really occur in the letter.
 - Do not give legal advice beyond what the letter says. When the stakes are high (money, residence permit, debt collection), suggest free local counselling.
 
 Use exactly this structure, with the headings translated into {language}:
