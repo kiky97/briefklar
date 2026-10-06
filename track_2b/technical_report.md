@@ -134,7 +134,7 @@ Structure compliance was 1.00 in all cells of the final runs. Extraction takes a
 - **Numbers:** `make eval` runs both strategies over `data/letters.jsonl` and writes `data/results/runs/run-<timestamp>-<strategy>.{json,md}`.
 - **Tests:** `make test` (offline, mock model).
 - **Hardware:** any machine with Docker for the hosted-endpoint setup; an NVIDIA GPU with ≥24 GB VRAM for `make run-local` with the 8B model.
-- **Settings:** `apertus-v1.5-70b`, temperature 0 (extraction, translation) / 0.2 (explanation), max 1500 tokens. The endpoint does not guarantee determinism, so expect small run-to-run variation.
+- **Settings:** `apertus-v1.5-70b`, temperature 0 (extraction, translation) / 0.2 (explanation). Max tokens are 1,500 by default and 4,096 for translation; any call cut off by the limit is retried once with a larger limit. The endpoint does not guarantee determinism, so expect small run-to-run variation.
 - **Commit:** `TODO: final commit hash`
 
 ## 8. Next steps
