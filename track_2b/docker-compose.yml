@@ -1,0 +1,48 @@
+# BriefKlar — Docker setup. Use the Makefile targets (make run / demo / eval / test).
+#
+# Model access follows the Hack Apertus template: LLM_NAME, LLM_BASE_URL, LLM_API_KEY,
+# taken from the shell environment or from a .env file next to this file.
+
+services:
+  app:
+    build: ./src
+    image: briefklar:latest
+    ports:
+      - "${PORT:-8000}:8000"
+    environment:
+      LLM_NAME: ${LLM_NAME:-apertus-v1.5-70b}
+      LLM_BASE_URL: ${LLM_BASE_URL:-https://hackapertus.livemap.sh/v1}
+      LLM_API_KEY: ${LLM_API_KEY:-}
+      LLM_TEMPERATURE: ${LLM_TEMPERATURE:-0.2}
+      LLM_MAX_TOKENS: ${LLM_MAX_TOKENS:-1500}
+      MOCK_LLM: ${MOCK_LLM:-0}
+      DATA_DIR: /data
+    volumes:
+      - ./data:/data
+
+  # Optional, for on-premise / air-gapped deployment: Apertus served locally by vLLM.
+  # Started only with `make run-local` (profile "local-gpu"). Needs an NVIDIA GPU and
+  # weights in ./models/apertus — see docs/DEPLOYMENT.md.
+  apertus:
+    profiles: ["local-gpu"]
+    image: vllm/vllm-openai:latest   # pin a tested version for production
+    command: >
+      --model /models/apertus
+      --served-model-name ${LLM_NAME:-apertus-v1.5-8b}
+      --max-model-len 16384
+      --port 8001
+    volumes:
+      - ./models:/models:ro
+    environment:
+      HF_HUB_OFFLINE: "1"
+      TRANSFORMERS_OFFLINE: "1"
+      VLLM_NO_USAGE_STATS: "1"
+      DO_NOT_TRACK: "1"
+    ipc: host
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              count: all
+              capabilities: [gpu]

@@ -4,7 +4,7 @@
     python -m eval.run_eval --languages English,Arabic   # choose target languages
     python -m eval.run_eval --judge                      # + LLM judge (needs JUDGE_MODEL)
 
-Apertus (APERTUS_* env) does all the work being evaluated. The optional judge is a
+Apertus (LLM_* env) does all the work being evaluated. The optional judge is a
 DIFFERENT open-weights model (JUDGE_* env) that only scores explanations; it never
 produces anything shown to users.
 """
@@ -26,10 +26,10 @@ from app import pipeline  # noqa: E402
 from app.config import get_settings  # noqa: E402
 from app.grounding import amount_in, find_amounts, find_dates, normalize_digits  # noqa: E402
 from app.llm import get_llm  # noqa: E402
-from eval.dataset import LETTERS  # noqa: E402
+from eval.dataset import DATA_DIR, LETTERS  # noqa: E402
 from eval.langcheck import check_language  # noqa: E402
 
-RESULTS = Path(__file__).parent / "results"
+RESULTS = DATA_DIR / "results" / "runs"
 
 JUDGE_SYSTEM = """You are a strict evaluator. A person received an official letter and an assistant explained it to them in {language}.
 You get the original letter, the correct key facts, and the explanation.
@@ -223,13 +223,13 @@ def main():
     for r in results:
         print(f"  {r['id']:<30} {'ERROR ' + r['error'] if 'error' in r else 'ok'}")
 
-    RESULTS.mkdir(exist_ok=True)
+    RESULTS.mkdir(parents=True, exist_ok=True)
     stamp = time.strftime("%Y%m%d-%H%M%S")
     (RESULTS / f"run-{stamp}-{args.strategy}.json").write_text(json.dumps(results, ensure_ascii=False, indent=1), encoding="utf-8")
     summary = summarize(results, languages, model, judge_model, args.strategy)
     (RESULTS / f"run-{stamp}-{args.strategy}.md").write_text(summary, encoding="utf-8")
     print("\n" + summary)
-    print(f"Saved to eval/results/run-{stamp}-{args.strategy}.json and .md")
+    print(f"Saved to {RESULTS}/run-{stamp}-{args.strategy}.json and .md")
 
 
 if __name__ == "__main__":

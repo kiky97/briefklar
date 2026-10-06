@@ -16,7 +16,7 @@ STATIC = Path(__file__).parent / "static"
 # app free of outbound requests (air-gapped deployments). Enable with ENABLE_API_DOCS=1.
 _docs = os.getenv("ENABLE_API_DOCS", "").lower() in ("1", "true", "yes")
 app = FastAPI(
-    title="Apertus Letter Helper",
+    title="BriefKlar",
     docs_url="/docs" if _docs else None,
     redoc_url="/redoc" if _docs else None,
     openapi_url="/openapi.json" if _docs else None,
@@ -30,6 +30,14 @@ def _llm_errors(fn):
         raise HTTPException(502, f"The model returned output that could not be parsed: {e}")
     except Exception as e:  # network / auth errors from the inference endpoint
         raise HTTPException(502, f"Model call failed: {type(e).__name__}: {e}")
+
+
+@app.on_event("startup")
+def _announce():
+    s = get_settings()
+    print(f"BriefKlar ready on http://localhost:8000  |  model: {'mock' if s.mock else s.model} @ {s.base_url}", flush=True)
+    if not s.mock and not s.api_key:
+        print("WARNING: LLM_API_KEY is not set - model calls will fail. See .env.example.", flush=True)
 
 
 @app.get("/")

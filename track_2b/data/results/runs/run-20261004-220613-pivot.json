@@ -1,0 +1,1097 @@
+[
+ {
+  "id": "de_tax_invoice",
+  "lang": "de",
+  "extract_seconds": 10.7,
+  "facts": {
+   "sender": "Kantonales Steueramt",
+   "letter_language": "de",
+   "letter_type": "tax",
+   "summary_en": "The Canton Tax Office issues a bill for state and municipal taxes for 2025 amounting to CHF 2'486.40, due by 30 November 2026.",
+   "key_dates": [
+    {
+     "date": "2026-11-30",
+     "kind": "deadline",
+     "what": "Payment due date for the tax bill",
+     "verified": true
+    },
+    {
+     "date": "2026-11-12",
+     "kind": "deadline",
+     "what": "Deadline to file a written objection against the tax assessment",
+     "verified": true
+    }
+   ],
+   "amounts": [
+    {
+     "value": 2486.4,
+     "currency": "CHF",
+     "what": "State and municipal taxes for 2025",
+     "verified": true
+    }
+   ],
+   "reference_numbers": [
+    "2025-448-71203"
+   ],
+   "actions": [
+    "Pay CHF 2'486.40 by 30 November 2026 using the attached QR payment slip.",
+    "File a written objection against the tax assessment by 12 November 2026 if you wish to contest it."
+   ],
+   "urgency": "medium",
+   "warnings": []
+  },
+  "extraction": {
+   "type_correct": true,
+   "date_recall": 1.0,
+   "date_precision": 1.0,
+   "deadline_recall": 1.0,
+   "invented_dates": 0,
+   "amount_recall": 1.0,
+   "amount_precision": 1.0,
+   "invented_amounts": 0,
+   "action_recall": 1.0
+  },
+  "explanations": {
+   "English": {
+    "text": "## What is this letter?\nThis is an official letter from the Canton Tax Office (Kantonales Steueramt). It tells you that you owe money for state and municipal taxes for the year 2025. The total amount is CHF 2'486.40.\n\n## What do I need to do?\nYou have two main options:\n1. **Pay the bill:** You must send the money by **30.11.2026**. Use the QR payment slip that came with the letter.\n2. **Disagree with the bill:** If you think the amount is wrong, you can file a written objection (Einsprache). You must send it by **12.11.2026**. You must explain why you disagree.\n\n## Important dates\n*   **30.11.2026:** The final day to pay the bill without extra interest.\n*   **12.11.2026:** The final day to send your objection if you wish to contest the tax amount.\n\n## Money\nYou owe **CHF 2'486.40** for your 2025 state and municipal taxes.\n\n## If I disagree or need help\nIf you do not agree with this bill, you can send a written objection by **12.11.2026**. You must explain your reasons clearly.\n\nIf you are unsure about how to pay or how to write an objection, you can ask for free help from a local advice centre. They can explain things in simple language. Do not ignore this letter, as late payment may result in extra charges.",
+    "seconds": 9.6,
+    "critical_facts_preserved": 1.0,
+    "has_structure": true,
+    "expected_script": "LATIN",
+    "script_share": 1.0,
+    "language_ok": true,
+    "chars": 1227
+   },
+   "Ukrainian": {
+    "text": "## Що це за лист?\nЦей лист — рахунок від кантональній податковій службі (Kantonales Steueramt). Вони вимагають сплатити ваші державні та муніципальні податки за 2025 рік.\n\n## Що мені потрібно зробити?\nУ вас є два основні варіанти:\n1. Сплатити рахунок: Ви повинні сплатити CHF 2'486.40 до **30.11.2026**. Використайте QR-квитанцію, що додавалася до листа.\n2. Не погодитися з рахунком: Якщо ви вважаєте, що сума неправильна, ви можете подати письмову скаргу (Einsprache). Ви повинні надіслати її до **12.11.2026**. Вам потрібно пояснити, чому ви не погоджуєтеся.\n\n## Важливі дати\n*   **30.11.2026:** Останній день для сплати рахунку.\n*   **12.11.2026:** Останній день для надсилання письмової скарги, якщо ви хочете оскаржити рахунок.\n\n## Гроші\nВи заборговані **CHF 2'486.40** за ваші державні та муніципальні податки за 2025 рік.\n\n## Якщо я не погоджуюся або потребую допомоги\nЯкщо ви не впевнені щодо рахунку або не можете його сплатити, вам слід звернутися за безкоштовною місцевою консультацією. Ви можете зв'язатися з безкоштовною юридичною допомогою або центром споживчих консультацій. Вони допоможуть вам зрозуміти ваші права. Не ігноруйте рахунок, оскільки несвоєчасна сплата може призвести до нарахування додаткових відсотків.",
+    "seconds": 20.5,
+    "critical_facts_preserved": 1.0,
+    "has_structure": true,
+    "expected_script": "CYRILLIC",
+    "script_share": 0.991,
+    "language_ok": true,
+    "chars": 1233
+   },
+   "Tigrinya": {
+    "text": "## እዚ ዝተሓተተ ደብዳቤ እንታይ እዩ?\nእዚ ዝተሓተተ ደብዳቤ ካብ ካንቶናል ትካል ግብሪ (Kantonales Steueramt) ዝመጸ ብልሓ እዩ። ንዓኻ ንዓመት 2025 ንግዳዊን ከተማዊን ግብራትካ CHF 2'486.40 ከም ዘለካ ይነግርካ።\n\n## እንታይ ክገብር ኣለኒ?\nነቲ ገንዘብ ክሳብ 30.11.2026 ክትኸፍሎ ኣለካ። ንኽትኸፍሎ ካብቲ ደብዳቤ ዝመጸ QR ፓይሜንት ሰሌዳ ክትጥቀም ትኽእል ኢኻ። ኣብ ግዜኡ እንተዘይከፊልካ፡ ተወሳኺ ናይ ንብረት ኣኽፋን (ኢንተርስት) ክትኸፍል ኣለካ።\n\nእዚ ብልሓ እንተዘይተዓዘብካ፡ ጽሑፋዊ ተቓውሞ (Einsprache) ክትሰድድ ትኽእል ኢኻ። ንኽትተቓውሞ እንተደሊኻ፡ እቲ ጽሑፋዊ ተቓውሞ ክሳብ 12.11.2026 ክትሰድዶ ኣለካ። ንሳዕቤኑ ንኸምንታይ ዘይተዓዘብካ ከም ዝገልጽ ኣገዳሲ እዩ።\n\n## ኣገደስቲ መዓልታት\n- **30.11.2026**: ነቲ ገንዘብ ክሳብ እዚ መዓልቲ ክትኸፍሎ ኣለካ።\n- **12.11.2026**: እቲ ጽሑፋዊ ተቓውሞ ንኽትሰድዶ ዝተወሰነ መወዳእታ መዓልቲ እዩ።\n\n## ገንዘብ\nንዓመት 2025 ንግዳዊን ከተማዊን ግብራትካ CHF 2'486.40 ከም ዘለካ እዩ።\n\n## እንተዘይተዓዘብካ ወይ ተሓጋዝካ እንተደሊኻ\nእቲ ብልሓ እንተዘይተዓዘብካ፡ ክሳብ 12.11.2026 ጽሑፋዊ ተቓውሞ ክትሰድዶ ትኽእል ኢኻ። እንተዘይፈ",
+    "seconds": 44.8,
+    "critical_facts_preserved": 1.0,
+    "has_structure": true,
+    "expected_script": "ETHIOPIC",
+    "script_share": 0.982,
+    "language_ok": true,
+    "tigrinya_markers": 37,
+    "amharic_markers": 1,
+    "detected": "tigrinya",
+    "chars": 740
+   },
+   "Arabic": {
+    "text": "## ما هي هذه الرسالة؟\nهذه الرسالة فاتورة من مكتب الضرائب في الكانتون (Kantonales Steueramt). تخبرك بأن عليك دفع مبلغ CHF 2'486.40 كضرائب على المستوى الفدرالي والبلدي لسنة 2025.\n\n## ما الذي يتعين عليّ فعله؟\nلديك خياران رئيسيان:\n1. دفع مبلغ CHF 2'486.40 بحلول **30.11.2026**. استخدم قسيمة الدفع بالرمز الشريطي (QR) التي جاءت مع الرسالة.\n2. إذا كنت لا توافق على مبلغ الضريبة، يمكنك تقديم اعتراض كتابي (Einsprache) بحلول **12.11.2026**. يجب عليك شرح أسباب عدم موافقتك.\n\n## التواريخ المهمة\n- **30.11.2026**: اليوم النهائي لدفع الفاتورة.\n- **12.11.2026**: اليوم النهائي لإرسال اعتراض كتابي إذا كنت ترغب في الطعن في الضريبة.\n\n## المال\nأنت مدين بمبلغ **CHF 2'486.40** كضرائب لسنة 2025. إذا تأخرت في الدفع، سيتم إضافة فائدة تأخير (Verzugszins).\n\n## إذا كنت غير موافق أو بحاجة إلى مساعدة\nإذا كنت ترغب في الاعتراض على مبلغ الضريبة، اكتب رسالة تشرح فيها أسبابك وأرسلها بحلول **12.11.2026**. إذا كنت غير متأكد من شيء ما أو بحاجة إلى مساعدة، يمكنك طلب مشورة مجانية من مكتب المساعدة القانونية المحلي أو مركز نصيحة المستهلك. لا تتجاهل هذه الرسالة إذا لم تتمكن من الدفع، لأن ذلك قد يؤدي إلى تطبيق عقوبات.",
+    "seconds": 17.9,
+    "critical_facts_preserved": 1.0,
+    "has_structure": true,
+    "expected_script": "ARABIC",
+    "script_share": 0.987,
+    "language_ok": true,
+    "chars": 1087
+   }
+  }
+ },
+ {
+  "id": "de_parking_fine",
+  "lang": "de",
+  "extract_seconds": 8.8,
+  "facts": {
+   "sender": "Stadtpolizei Musterstadt",
+   "letter_language": "de",
+   "letter_type": "fine",
+   "summary_en": "A parking violation notice issued by the Musterstadt City Police for parking in a prohibited area on 28.09.2026, resulting in a CHF 120 fine to be paid by 31.10.2026.",
+   "key_dates": [
+    {
+     "date": "2026-09-28",
+     "kind": "other",
+     "what": "Parking violation occurred",
+     "verified": true
+    },
+    {
+     "date": "2026-10-31",
+     "kind": "deadline",
+     "what": "Payment deadline for the fine",
+     "verified": true
+    }
+   ],
+   "amounts": [
+    {
+     "value": 120.0,
+     "currency": "CHF",
+     "what": "Parking violation fine",
+     "verified": true
+    }
+   ],
+   "reference_numbers": [
+    "OB-2026-55102"
+   ],
+   "actions": [
+    "Pay the CHF 120 fine by 31.10.2026 to avoid additional costs and a formal criminal procedure."
+   ],
+   "urgency": "medium",
+   "warnings": []
+  },
+  "extraction": {
+   "type_correct": true,
+   "date_recall": 1.0,
+   "date_precision": 1.0,
+   "deadline_recall": 1.0,
+   "invented_dates": 0,
+   "amount_recall": 1.0,
+   "amount_precision": 1.0,
+   "invented_amounts": 0,
+   "action_recall": 1.0
+  },
+  "explanations": {
+   "English": {
+    "text": "## What is this letter?\nThis letter is a fine notice from the Musterstadt City Police. They say your car was parked in a no-parking zone on 28.09.2026. You must pay a penalty.\n\n## What do I need to do?\nYou must pay CHF 120.00 by 31.10.2026. If you do not pay on time, they will start a formal criminal procedure. This could cost you more money.\n\n## Important dates\n- 28.09.2026: The parking violation happened.\n- 31.10.2026: The deadline to pay the fine.\n\n## Money\nYou owe CHF 120.00 for the parking violation.\n\n## If I disagree or need help\nIf you think the fine is wrong, you can file an objection (Einsprache). Ask the police for the correct form. If you are unsure or cannot pay, seek free local advice from a legal aid office or community centre. Do not ignore the letter.",
+    "seconds": 6.4,
+    "critical_facts_preserved": 1.0,
+    "has_structure": true,
+    "expected_script": "LATIN",
+    "script_share": 1.0,
+    "language_ok": true,
+    "chars": 777
+   },
+   "Ukrainian": {
+    "text": "## Що це за лист?\nЦей лист — повідомлення про штраф за паркування від поліції міста Мустерштадт. Вони повідомляють, що ваш автомобіль був припаркований у зоні, де паркування заборонено, 28.09.2026. Вам необхідно сплатити штраф.\n\n## Що мені потрібно зробити?\nВи повинні сплатити CHF 120.00 до 31.10.2026. Якщо ви не сплатите вчасно, вони розпочнуть формальну кримінальну процедуру. Це може коштувати вам більше грошей.\n\n## Важливі дати\n- 28.09.2026: Сталося порушення правил паркування.\n- 31.10.2026: Останній день для сплати штрафу.\n\n## Гроші\nВи винні CHF 120.00.\n\n## Якщо я не згоден або потребую допомоги\nЯкщо ви вважаєте, що штраф нараховано неправильно, ви можете подати заперечення (Einsprache). Ви можете звернутися за безкоштовною консультацією до місцевого бюро правової допомоги або до центру консультацій для споживачів. Вони допоможуть вам зрозуміти ваші права.",
+    "seconds": 15.4,
+    "critical_facts_preserved": 1.0,
+    "has_structure": true,
+    "expected_script": "CYRILLIC",
+    "script_share": 0.991,
+    "language_ok": true,
+    "chars": 872
+   },
+   "Tigrinya": {
+    "text": "## እዚ ዝተሓተተ ደብዳቤ እንታይ እዩ?\nእዚ ዝተሓተተ ደብዳቤ ካብ ከተማ ሙስታትስታድት ፖሊስ ዝመጸ ቅጫ እዩ። ኣብ 28.09.2026 መኪናኻ ኣብ ዘይሕቖል ከባቢ ከም ዝተቐመጠ ይነግሩኻ። CHF 120.00 ቅጫ ክትኸፍል ኣለካ።\n\n## እንታይ ክገብር እየ?\nኣብ መዓስ 31.10.2026 ዝድረት ቀንዲ መዓስ እናተበገሰካ CHF 120.00 ክትኸፍል ኣለካ። ኣብ ግዜኡ እንተዘይከፊሉ፡ ብዘይካ ሕጋዊ ምኽሪ ምቕጻል ክጅምሩ ይኽእሉ። እዚ ድማ ተወሳኺ ወጻኢታት ከስዕብ ይኽእል።\n\n## ኣገደስቲ መዓልታት\n- 28.09.2026: እቲ ሕጋዊ ምትሕግጋዝ ዝተፈጸመሉ መዓስ\n- 31.10.2026: ቅጫ ንኸትኸፍል ዝድረት መወዳእታ መዓስ\n\n## ገንዘብ\nCHF 120.00 ክትኸፍል ኣለካ። እዚ ገንዘብ ኣብ 31.10.2026 ኣቐዲምካ ክትኸፍሎ ኣለካ።\n\n## እንተዘይተሰማማዕካ ወይ ተሓጋዝ እትደሊ\nእቲ ቅጫ ጌጋ እዩ ኢኻ ኢልካ እንተዘይተሰማማዕካ፡ ቅሬታ (Einsprache) ክትኣቕም ትኽእል ኢኻ። ንቅኑዕ ፎርም ንምርካብ ካብ ፖሊስ ከተማ ሕተት። እንተዘይተሰማማዕካ ወይ ተሓጋዝ እትደሊ እንተኾንካ፡ ንሕጋዊ ወይ ቁጠባዊ ተሓጋዝ ንናጻ ዝኾነ ዓበይቲ ኣማኸሪኻ ርኸብ። እዚ ዝተሓተተ ደብዳቤ ኣይትዘንግዎ።",
+    "seconds": 42.2,
+    "critical_facts_preserved": 1.0,
+    "has_structure": true,
+    "expected_script": "ETHIOPIC",
+    "script_share": 0.979,
+    "language_ok": true,
+    "tigrinya_markers": 39,
+    "amharic_markers": 0,
+    "detected": "tigrinya",
+    "chars": 682
+   },
+   "Arabic": {
+    "text": "## ما هي هذه الرسالة؟\nهذه الرسالة هي إشعار غرامة من شرطة مدينة موسترشتات. يقولون إن سيارتك كانت متوقفة في منطقة ممنوع الوقوف فيها في 28.09.2026. يجب عليك دفع غرامة قدرها CHF 120.00.\n\n## ما الذي يتعين عليّ فعله؟\nيجب عليك دفع مبلغ الغرامة CHF 120.00 بحلول 31.10.2026. إذا لم تدفع في الوقت المحدد، سيبدأون إجراء جنائي رسمي. قد يؤدي ذلك إلى تكاليف إضافية عليك.\n\n## التواريخ المهمة\n- 28.09.2026: وقع انتهاك وقوف السيارة.\n- 31.10.2026: الموعد النهائي لدفع الغرامة.\n\n## المبلغ المالي\nأنت مدين بمبلغ CHF 120.00.\n\n## إذا كنت غير موافق أو بحاجة إلى مساعدة\nإذا كنت تعتقد أن هذه الغرامة غير صحيحة، يمكنك تقديم اعتراض (Einsprache). ومع ذلك، إذا كنت غير متأكد أو قلق بشأن العملية، يرجى طلب مشورة مجانية محلية من مكتب المساعدة القانونية أو مركز دعم المجتمع. يمكنهم مساعدتك في فهم حقوقك دون أي تكلفة.",
+    "seconds": 14.1,
+    "critical_facts_preserved": 1.0,
+    "has_structure": true,
+    "expected_script": "ARABIC",
+    "script_share": 0.983,
+    "language_ok": true,
+    "chars": 784
+   }
+  }
+ },
+ {
+  "id": "de_permit_renewal",
+  "lang": "de",
+  "extract_seconds": 7.7,
+  "facts": {
+   "sender": "Migrationsamt des Kantons Sektion Aufenthalt",
+   "letter_language": "de",
+   "letter_type": "residence_permit",
+   "summary_en": "The residence permit B of Mr. Bereket Muster expires on 15.01.2027 and he must submit required documents by 01.12.2026 to avoid negative consequences.",
+   "key_dates": [
+    {
+     "date": "2026-12-01",
+     "kind": "deadline",
+     "what": "Deadline to submit documents for permit extension",
+     "verified": true
+    }
+   ],
+   "amounts": [
+    {
+     "value": 95.0,
+     "currency": "CHF",
+     "what": "Fee for residence permit extension",
+     "verified": true
+    }
+   ],
+   "reference_numbers": [
+    "MA-883-2041"
+   ],
+   "actions": [
+    "Submit the completed application form, a copy of your valid passport, and a copy of your current employment contract to the Migrationsamt by 01.12.2026."
+   ],
+   "urgency": "medium",
+   "warnings": []
+  },
+  "extraction": {
+   "type_correct": true,
+   "date_recall": 0.5,
+   "date_precision": 1.0,
+   "deadline_recall": 1.0,
+   "invented_dates": 0,
+   "amount_recall": 1.0,
+   "amount_precision": 1.0,
+   "invented_amounts": 0,
+   "action_recall": 0.75
+  },
+  "explanations": {
+   "English": {
+    "text": "## What is this letter?\nThis letter is from the migration office (Migrationsamt) of your canton. They are telling you that your residence permit (Aufenthaltsbewilligung B) will expire on 15.01.2027. You need to send them some documents to keep living in Switzerland.\n\n## What do I need to do?\nYou must send the following documents to the Migrationsamt by 01.12.2026:\n- The filled-in application form (it is attached to this letter)\n- A copy of your valid passport\n- A copy of your current employment contract\n\n## Important dates\n- Deadline to send documents: 01.12.2026\nYour permit expires on 15.01.2027, but you must act before the deadline.\n\n## Money\nYou will have to pay a fee of CHF 95.00 for the permit extension. They will send you an invoice after they receive your documents.\n\n## If I disagree or need help\nIf you cannot send the documents by the deadline, it might affect your right to stay. If you have questions or need help, you can call the Migrationsamt or visit their office. For free advice, you can also ask at a local advice centre for migrants or legal aid office.",
+    "seconds": 7.5,
+    "critical_facts_preserved": 1.0,
+    "has_structure": true,
+    "expected_script": "LATIN",
+    "script_share": 1.0,
+    "language_ok": true,
+    "chars": 1083
+   },
+   "Ukrainian": {
+    "text": "## Що це за лист?\nЦе офіційний лист від Управління з питань міграції (Migrationsamt) щодо вашого дозволу на проживання. Вони просять вас поновити дозвіл.\n\n## Що мені потрібно зробити?\nВи повинні надіслати наступні документи до Управління з питань міграції до 01.12.2026:\n- Заповнену анкету (додано до цього листа)\n- Копію дійсного паспорта\n- Копію поточного трудового договору\n\n## Важливі дати\n- Термін надіслання документів: 01.12.2026\nВаш поточний дозвіл діє до 15.01.2027.\n\n## Гроші\nВам потрібно сплатити CHF 95.00 за продовження дозволу. Ви отримаєте рахунок після того, як вони отримають ваші документи.\n\n## Якщо я не згоден або потребую допомоги\nЯкщо ви не можете надіслати документи вчасно або маєте запитання, ви можете зв'язатися безпосередньо з Управлінням з питань міграції. Для безкоштовної консультації ви також можете звернутися за допомогою до місцевого консультаційного центру для мігрантів або мешканців.",
+    "seconds": 15.4,
+    "critical_facts_preserved": 1.0,
+    "has_structure": true,
+    "expected_script": "CYRILLIC",
+    "script_share": 0.996,
+    "language_ok": true,
+    "chars": 921
+   },
+   "Tigrinya": {
+    "text": "## እዚ ደብዳቤ እንታይ እዩ?\nእዚ ደብዳቤ ካብ ስነ-ስርዓት ስደተኛታት (Migrationsamt) ናይቲ ካንቶንካ እዩ። ንሳቶም ንሓብሉ፡ ናይ መንበሪ ፍቓድካ (Aufenthaltsbewilligung B) ኣብ 15.01.2027 ክውዳእ እዩ። ፍቓድካ ንኽትዕቅቦ፡ ካብኻ ገለ ሰነዳት ክትሰድዮም ኣለካ።\n\n## እንታይ ክገብር እየ?\nነቶም ዝስዕቡ ነገራት ክሳብ 01.12.2026 ናብ ስነ-ስርዓት ስደተኛታት ክትሰድዮም ኣለካ፡\n- እቲ ተሓሊፉ ዝተማልአ ሕቶታት (ኣብ ጎኒ እዚ ደብዳቤ ተኣኪቡ ኣሎ)\n- ናይ ዝኾነ ዝነበረ ፓስፖርትካ ቅጂ\n- ናይ ንኡስ ስራሕካ ዝነበረ ውልቀ ውልቀ ውዕላትካ ቅጂ\n\n## ኣገደስቲ መዓልታት\n- መዓስ ሰነዳት ክትሰድዮም ኣለካ፡ 01.12.2026\nእዚ መዓስ እንተ ተሰናኺልካ፡ ኣብ ስደትካ ኣብ ስዊዘርላንድ ብዘይካ ጸገማት ክፍጠሩ ይኽእሉ።\n\n## ገንዘብ\nንምህዳይ ፍቓድካ CHF 95.00 ክትኸፍል ኣለካ። እቶም ሰነዳትካ ከም ዝተቐበሉካ ንኽፈልጡኻ ናይ ክፍወል ብላንክ ክልእኾኹልካ እዮም።\n\n## እንተ ዘይተሰማማዕካ ወይ ተሓጋዝካ እትደሊ\nእዚ ደብዳቤ እንተዘይተረዳእካ ወይ ነቶም ሰነዳት ክትሰድዮም እንተዘይትኽእል፡ ተሓጋዝካ ክትጽውዕ ትኽእል ኢኻ። ናብ ስነ-ስርዓት ስደተኛታት ተዛረብ ወይ ብኣካል ኣቕርብ። ንናጻ",
+    "seconds": 46.1,
+    "critical_facts_preserved": 1.0,
+    "has_structure": true,
+    "expected_script": "ETHIOPIC",
+    "script_share": 0.993,
+    "language_ok": true,
+    "tigrinya_markers": 36,
+    "amharic_markers": 1,
+    "detected": "tigrinya",
+    "chars": 713
+   },
+   "Arabic": {
+    "text": "## ما هي هذه الرسالة؟\nهذه الرسالة من مكتب الهجرة (Migrationsamt) في كانتونك. وهي تتعلق بتصريح الإقامة الخاص بك (Aufenthaltsbewilligung B). سيُستنفد تصريحك في 15.01.2027. يحتاج المكتب إلى مستنداتك ليقرر ما إذا كان بإمكانه تمديده.\n\n## ما الذي يتعين عليّ فعله؟\nيجب عليك إرسال المستندات التالية إلى مكتب الهجرة (Migrationsamt) بحلول 01.12.2026:\n- نموذج الطلب المُعبأ (مرفق بهذه الرسالة)\n- نسخة من جواز سفرك الساري\n- نسخة من عقد عملك الحالي\n\n## التواريخ المهمة\n- موعد إرسال المستندات: 01.12.2026\n- تاريخ انتهاء صلاحية تصريحك: 15.01.2027\n\n## المال\nسيتعين عليك دفع رسوم بقيمة CHF 95.00 لتمديد التصريح. ستتلقى فاتورة بعد أن يستلم المكتب مستنداتك.\n\n## إذا كنت غير موافق أو بحاجة إلى مساعدة\nإذا لم تتمكن من إرسال المستندات بحلول الموعد النهائي، قد يتأثر إقامتك في البلاد. للحصول على مساعدة في هذه العملية، يمكنك التواصل مع خدمات الاستشارات المجانية للمهاجرين في منطقتك. لا تتجاهل هذه الرسالة.",
+    "seconds": 14.1,
+    "critical_facts_preserved": 1.0,
+    "has_structure": true,
+    "expected_script": "ARABIC",
+    "script_share": 0.995,
+    "language_ok": true,
+    "chars": 882
+   }
+  }
+ },
+ {
+  "id": "de_insurance_reminder",
+  "lang": "de",
+  "extract_seconds": 6.5,
+  "facts": {
+   "sender": "Gesundheitskasse Muster AG",
+   "letter_language": "de",
+   "letter_type": "health_insurance",
+   "summary_en": "Health insurance provider sends a reminder for an outstanding premium of CHF 387.20 for September 2026, demanding payment by 20.10.2026 to avoid additional fees and legal action.",
+   "key_dates": [
+    {
+     "date": "2026-10-20",
+     "kind": "deadline",
+     "what": "Payment deadline for outstanding premium of CHF 387.20",
+     "verified": true
+    }
+   ],
+   "amounts": [
+    {
+     "value": 387.2,
+     "currency": "CHF",
+     "what": "Outstanding health insurance premium for September 2026",
+     "verified": true
+    }
+   ],
+   "reference_numbers": [
+    "756.0000.0000.01"
+   ],
+   "actions": [
+    "Pay the outstanding amount of CHF 387.20 by 20.10.2026 to avoid a CHF 30.00 late fee and legal proceedings."
+   ],
+   "urgency": "high",
+   "warnings": []
+  },
+  "extraction": {
+   "type_correct": true,
+   "date_recall": 1.0,
+   "date_precision": 1.0,
+   "deadline_recall": 1.0,
+   "invented_dates": 0,
+   "amount_recall": 0.5,
+   "amount_precision": 1.0,
+   "invented_amounts": 0,
+   "action_recall": 1.0
+  },
+  "explanations": {
+   "English": {
+    "text": "## What is this letter?\nThis letter is a reminder from your health insurance company. They are asking you to pay an outstanding premium. The amount is CHF 387.20 for the month of September 2026.\n\n## What do I need to do?\nYou must pay the amount of CHF 387.20 by the deadline. The deadline is 20.10.2026 (20.10.2026).\n\n## Important dates\nThe most important date is **20.10.2026**. You must pay by this date.\n\n## Money\nYou owe **CHF 387.20**.\nIf you do not pay by 20.10.2026, you will have to pay an extra **CHF 30.00** late fee. The company may also start legal action (Betreibung) to collect the money.\n\n## If I disagree or need help\nIf you think the bill is wrong, or if you cannot pay, you should contact the sender. Ask them to explain or help you. If you are unsure about your rights or need help with money problems, seek free local advice. Do not ignore this letter, as it could lead to more costs or legal trouble.",
+    "seconds": 7.0,
+    "critical_facts_preserved": 1.0,
+    "has_structure": true,
+    "expected_script": "LATIN",
+    "script_share": 1.0,
+    "language_ok": true,
+    "chars": 921
+   },
+   "Ukrainian": {
+    "text": "## Що це за лист?\nЦей лист — нагадування від вашої страхової компанії здоров'я, Gesundheitskasse Muster AG. Вони просять вас сплатити заборгованість за страхову премію.\n\n## Що мені потрібно зробити?\nВи повинні сплатити суму **CHF 387.20** до дати **20.10.2026**. Це крайній термін.\n\n## Важливі дати\nНайважливіша дата — **20.10.2026**. Ви повинні сплатити до цього дня.\n\n## Гроші\nВи заборгували **CHF 387.20** за страхову премію за вересень 2026 року.\n\nЯкщо ви не сплатите до **20.10.2026**, з вас стягнуть додаткову комісію у розмірі **CHF 30.00** і можуть ініціювати судові дії (Betreibung).\n\n## Якщо я не згоден або потребую допомоги\nЯкщо ви вважаєте, що цей рахунок помилковий, або якщо ви не можете сплатити, вам слід негайно зв'язатися з Gesundheitskasse Muster AG. Ви також можете звернутися за безкоштовною консультацією до місцевого центру захисту прав споживачів або соціальних служб. Не ігноруйте цей лист, якщо ви не згодні, оскільки можуть бути ініційовані судові дії.",
+    "seconds": 16.6,
+    "critical_facts_preserved": 1.0,
+    "has_structure": true,
+    "expected_script": "CYRILLIC",
+    "script_share": 0.919,
+    "language_ok": true,
+    "chars": 980
+   },
+   "Tigrinya": {
+    "text": "## እዚ ዝተሓተተ ደብዳቤ እንታይ እዩ?\nእዚ ዝተሓተተ ደብዳቤ ካብ ናይ ጥዕና ወኪልካ ዝመጸ ምኽሪ እዩ። ንመስከረም 2026 ዝነበረ ናይ ወኪልካ ክፍወስ ገና ከም ዘይተኸፍነካ ይዛረቡ።\n\n## እንታይ ክገብር እየ?\nንኽፍወስ **CHF 387.20** ክሳብ **20.10.2026** ክትኸፍሎ ኣለካ። እዚ መስርዕ እዩ።\n\n## ኣገደስቲ መዓልታት\nእቲ ኣገዳሲ መዓልቲ **20.10.2026** እዩ። ክሳብ እዚ መዓልቲ ክትኸፍሎ ኣለካ።\n\n## ገንዘብ\n**CHF 387.20** ከም ዘይተኸፍነካ ኣለካ። ኣብ **20.10.2026** እንተዘይኸፊእካ፡ **CHF 30.00** ዝኾነ ብዘይከፍሊ መወኽሲ ክተኣታተዉን፡ ንገንዘብ ንምምላስ ሕጋዊ ስጉምቲ ክጅምሩን ይኽእሉ።\n\n## እንተዘይተሰማማዕካ ወይ ተሓጋዝካ እንተደሊኻ\nእዚ ጌጋ እንተኾይኑ ወይ እንተዘይተኸፍልካ ክትኸፍል እንተዘይትኽእል፡ ነቲ ዝለኸፍኦ ሰብ ክትራኸብ ኣለካ። ካብ ናይ ከተማኻ ናጻ ሓበሬታ ማእከል ድማ ተሓጋዝካ ክትሓትት ትኽእል ኢኻ። ንመሰላትካን ንዝኾነ ኣማራጺታትካን ክሕግዙኻ ይኽእሉ።",
+    "seconds": 35.3,
+    "critical_facts_preserved": 1.0,
+    "has_structure": true,
+    "expected_script": "ETHIOPIC",
+    "script_share": 0.976,
+    "language_ok": true,
+    "tigrinya_markers": 36,
+    "amharic_markers": 0,
+    "detected": "tigrinya",
+    "chars": 590
+   },
+   "Arabic": {
+    "text": "## ما هي هذه الرسالة؟\nهذه رسالة تذكير من شركة التأمين الصحي الخاصة بك، Gesundheitskasse Muster AG. يطلبون منك دفع قسط التأمين الصحي المستحق.\n\n## ما الذي يتعين عليّ فعله؟\nيجب عليك دفع مبلغ CHF 387.20 بحلول تاريخ 20.10.2026. إذا لم تقم بالدفع بحلول هذا التاريخ، سيُفرض عليك رسم إضافي قدره CHF 30.00 وقد تبدأ الشركة إجراءات قانونية لتحصيل المبلغ.\n\n## التواريخ المهمة\nيجب عليك الدفع بحلول **20.10.2026**.\n\n## المال\nأنت مدين بمبلغ **CHF 387.20** مقابل قسط سبتمبر 2026. إذا لم تقم بالدفع في الوقت المحدد، ستتحمل تكاليف تأخير إضافية قدرها **CHF 30.00**.\n\n## إذا كنت غير موافق أو بحاجة إلى مساعدة\nإذا كنت تعتقد أن الفاتورة غير صحيحة أو لا يمكنك الدفع، يجب عليك الاتصال بشركة Gesundheitskasse Muster AG قبل الموعد النهائي. إذا كنت غير متأكد أو بحاجة إلى مساعدة، يمكنك طلب مشورة مجانية من خدمة الاستشارات المحلية. لا تتجاهل هذه الرسالة لأنها قد تؤدي إلى إجراءات تحصيل الديون.",
+    "seconds": 14.7,
+    "critical_facts_preserved": 1.0,
+    "has_structure": true,
+    "expected_script": "ARABIC",
+    "script_share": 0.904,
+    "language_ok": true,
+    "chars": 865
+   }
+  }
+ },
+ {
+  "id": "de_debt_collection_no_date",
+  "lang": "de",
+  "extract_seconds": 9.6,
+  "facts": {
+   "sender": "Betreibungsamt Musterstadt",
+   "letter_language": "de",
+   "letter_type": "debt_collection",
+   "summary_en": "A payment order has been issued for CHF 1,150.00 plus interest and CHF 73.30 in costs, totaling CHF 1,223.30, for an outstanding invoice for electrical installation work.",
+   "key_dates": [],
+   "amounts": [
+    {
+     "value": 1150.0,
+     "currency": "CHF",
+     "what": "Main debt for electrical installation",
+     "verified": true
+    },
+    {
+     "value": 73.3,
+     "currency": "CHF",
+     "what": "Costs of the payment order",
+     "verified": true
+    }
+   ],
+   "reference_numbers": [
+    "26-08814"
+   ],
+   "actions": [
+    "Pay the total amount of CHF 1,223.30 to the creditor within 20 days of receiving this notice.",
+    "If you dispute the debt, file an objection in writing or orally with the Betreibungsamt within 10 days of receiving this notice."
+   ],
+   "urgency": "high",
+   "warnings": []
+  },
+  "extraction": {
+   "type_correct": true,
+   "date_recall": null,
+   "date_precision": null,
+   "deadline_recall": null,
+   "invented_dates": 0,
+   "amount_recall": 1.0,
+   "amount_precision": 1.0,
+   "invented_amounts": 0,
+   "action_recall": 1.0
+  },
+  "explanations": {
+   "English": {
+    "text": "## What is this letter?\nThis is an official letter from the debt collection office (Betreibungsamt). It tells you that someone (the creditor) says you owe them money. You must pay this debt or tell the office you disagree.\n\n## What do I need to do?\nYou have two main options:\n1. **Pay the money**: You must pay CHF 1,223.30 to the creditor within 20 days of getting this letter.\n2. **Disagree**: If you do not owe this money, you must tell the debt collection office (Betreibungsamt) in writing or by speaking to them within 10 days. This is called a \"Rechtsvorschlag\".\n\n## Important dates\n- **Deadline to pay**: Within 20 days of receiving this notice.\n- **Deadline to disagree**: Within 10 days of receiving this notice.\n\n## Money\nYou owe a total of **CHF 1,223.30**.\n- CHF 1,150.00 is the main debt for electrical work.\n- CHF 73.30 is the cost for this payment order.\n\n## If I disagree or need help\nThis is a serious matter involving money. If you are unsure about the debt or cannot pay, please seek free advice from a local legal aid office or consumer advice centre. They can help you understand your rights without cost. Do not ignore this letter.",
+    "seconds": 8.3,
+    "critical_facts_preserved": 1.0,
+    "has_structure": true,
+    "expected_script": "LATIN",
+    "script_share": 1.0,
+    "language_ok": true,
+    "chars": 1154
+   },
+   "Ukrainian": {
+    "text": "## Що це за лист?\nЦе офіційне повідомлення про стягнення боргу від Управління з виконання рішень (Betreibungsamt) у Мюстерштадті. Воно повідомляє, що хтось (Elektro Muster GmbH) стверджує, що ви йому винні гроші.\n\n## Що мені потрібно зробити?\nУ вас є два основні варіанти:\n\n1. **Сплатити гроші:** Ви повинні сплатити загальну суму у розмірі CHF 1 223,30 кредитору протягом 20 днів з моменту отримання цього листа. Ця сума включає борг (CHF 1 150,00) плюс відсотки та витрати (CHF 73,30).\n\n2. **Не погодитися з боргом:** Якщо ви не винні в цих грошах або винні лише частково, ви повинні подати заперечення (так зване Einsprache) в письмовій формі або особисто звернувшись до Управління з виконання рішень протягом 10 днів з моменту отримання цього повідомлення.\n\n## Важливі дати\n- **Термін для сплати:** 20 днів з моменту отримання вами цього листа.\n- **Термін для заперечення:** 10 днів з моменту отримання вами цього листа.\n\n## Гроші\nВи винні загалом CHF 1 223,30.\n- CHF 1 150,00 — це основний борг за електромонтажні роботи.\n- CHF 73,30 — це витрати на видання цього платіжного доручення.\n\n## Якщо я не погоджуюся або потребую допомоги\nЦе серйозна справа, що стосується грошей та ваших прав. Якщо ви не впевнені щодо боргу або не можете його сплатити, будь ласка, зверніться за безкоштовною консультацією до місцевої юридичної допомоги або агентства з захисту прав споживачів. Вони можуть допомогти вам зрозуміти ваші варіанти безкоштовно.",
+    "seconds": 23.0,
+    "critical_facts_preserved": 1.0,
+    "has_structure": true,
+    "expected_script": "CYRILLIC",
+    "script_share": 0.988,
+    "language_ok": true,
+    "chars": 1441
+   },
+   "Tigrinya": {
+    "text": "## እዚ ዝተሓተተ ደብዳቤ እንታይ እዩ?\nእዚ ካብ ቤት ምእካብ ናይ ዕዳ (Betreibungsamt) ዝመጸ ቅዋማዊ ደብዳቤ እዩ። እቲ ዕዳ ዘለዎ (creditor) ንዕዳኻ ክትኸፍሎ ከም ዘለካ ዘመልክት እዩ።\n\n## እንታይ ክገብር ኣለኒ?\nክልተ ዓበይቲ መንገድታት ኣለካ፡\n1. እቲ ገንዘብ ክትኸፍሎ: CHF 1,223.30 (እቲ ዕዳን እቲ ዕጫን ዝሓዘ) ኣብ ዝተሓተተ መዓልቲ 20 ክትኸፍሎ ኣለካ።\n2. ንዕዳ ክትነግግ: እቲ ገንዘብ እንተዘይኣለካ፡ ኣብ ዝተሓተተ መዓልቲ 10 ኣብ ጽሑፍ ወይ ብቐረባ ናብ ቤት ምእካብ ናይ ዕዳ ክትነግጎ ኣለካ። እዚ “Rechtsvorschlag” ይብሎ።\n\n## ኣገደስቲ መዓልታት\n- እቲ ገንዘብ ክትኸፍሎ **20 መዓልቲ** ኣለካ።\n- እቲ ዕዳ እንተዘይኣለካ ክትነግግ እንተደሊኻ **10 መዓልቲ** ኣለካ።\n\n## ገንዘብ\nኣብ ክንዲ **CHF 1,223.30** ክትኸፍሎ ኣለካ፡\n- CHF 1,150.00 እቲ ናይ ኤሌክትሪካዊ ስራሕ ዕዳ እዩ።\n- CHF 73.30 እቲ ናይዚ ትእዛዝ ክፍሊ እዩ።\n\n## እንተዘይተሰማማዕካ ወይ ተሓጋዝካ እንተደሊኻ\nእዚ ኣብ ገንዘብ ዝተመርኮሰ ኣገዳሲ ጉዳይ እዩ። እንተዘይተሰማማዕካ ወይ ክትኸፍሎ እንተዘይትኽእል፡ ካብ ናይ ከተማኻ ናጽነት ናይ ሓታታ ማእከል (advice centre) ወይ ናይ ሕጊ ሓገዝ ቤት (legal aid office) ናጻ ተሓጋዝነት ድለዩ። እዚኦም ነቲ መሰልካ ብቐሊሉ ክ",
+    "seconds": 44.8,
+    "critical_facts_preserved": 1.0,
+    "has_structure": true,
+    "expected_script": "ETHIOPIC",
+    "script_share": 0.942,
+    "language_ok": true,
+    "tigrinya_markers": 56,
+    "amharic_markers": 0,
+    "detected": "tigrinya",
+    "chars": 787
+   },
+   "Arabic": {
+    "text": "## ما هي هذه الرسالة؟\nهذه الرسالة إشعار رسمي من مكتب تحصيل الديون (Betreibungsamt). تخبرك بأن شخصًا ما يطلب منك دفع مبلغ مستحق عليك. المبلغ مستحق مقابل أعمال كهربائية نفذتها شركة Elektro Muster GmbH.\n\n## ما الذي يتعين عليّ فعله؟\nلديك خياران رئيسيان:\n1. دفع المبلغ الكلي البالغ CHF 1,223.30 خلال 20 يومًا من استلام هذه الرسالة.\n2. إذا كنت غير موافق على الدين، يجب عليك إخطار مكتب تحصيل الديون كتابيًا أو شخصيًا خلال 10 أيام. وهذا ما يسمى \"Rechtsvorschlag\" (اعتراض).\n\n## التواريخ المهمة\n- لديك **20 يومًا** لدفع المبلغ.\n- لديك **10 أيام** لتقول إنك غير موافق على الدين إذا كنت ترغب في ذلك.\n\n## المبلغ المالي\nأنت مدين بمبلغ إجمالي قدره CHF 1,223.30.\n- CHF 1,150.00 هو الدين الرئيسي مقابل تركيب الكهرباء.\n- CHF 73.30 هو تكلفة أمر الدفع هذا.\n\n## إذا كنت غير موافق أو بحاجة إلى مساعدة\nهذه مسألة خطيرة تتعلق بالمال. يمكنك تقديم الاعتراض (Rechtsvorschlag) بنفسك. ومع ذلك، إذا كنت غير متأكد أو بحاجة إلى مساعدة، يرجى طلب مشورة مجانية من مكتب المساعدة القانونية المحلي أو مركز نصائح المستهلك. يمكنهم شرح حقوقك بدون تكلفة.",
+    "seconds": 16.6,
+    "critical_facts_preserved": 1.0,
+    "has_structure": true,
+    "expected_script": "ARABIC",
+    "script_share": 0.937,
+    "language_ok": true,
+    "chars": 1011
+   }
+  }
+ },
+ {
+  "id": "de_rav_appointment",
+  "lang": "de",
+  "extract_seconds": 6.4,
+  "facts": {
+   "sender": "Regionales Arbeitsvermittlungszentrum (RAV) Musterstadt",
+   "letter_language": "de",
+   "letter_type": "employment",
+   "summary_en": "The RAV Musterstadt invites the recipient to a mandatory consultation meeting on October 21, 2026, and requests the submission of proof of job search efforts for September.",
+   "key_dates": [
+    {
+     "date": "2026-10-21",
+     "kind": "appointment",
+     "what": "Consultation meeting at RAV Musterstadt",
+     "verified": true
+    }
+   ],
+   "amounts": [],
+   "reference_numbers": [],
+   "actions": [
+    "Attend the consultation meeting on October 21, 2026, at 09:30 AM in office 2.14 at RAV Musterstadt.",
+    "Bring the completed 'Nachweis der persönlichen Arbeitsbemühungen' form for September.",
+    "Notify the RAV in advance by phone if unable to attend for a valid reason."
+   ],
+   "urgency": "medium",
+   "warnings": []
+  },
+  "extraction": {
+   "type_correct": true,
+   "date_recall": 1.0,
+   "date_precision": 1.0,
+   "deadline_recall": null,
+   "invented_dates": 0,
+   "amount_recall": null,
+   "amount_precision": null,
+   "invented_amounts": 0,
+   "action_recall": 1.0
+  },
+  "explanations": {
+   "English": {
+    "text": "## What is this letter?\nThis letter is an invitation from the RAV (Regionales Arbeitsvermittlungszentrum) in Musterstadt. They want to meet with you for a consultation.\n\n## What do I need to do?\nYou must attend a meeting on 21.10.2026.\n- Go to RAV Musterstadt, office 2.14.\n- Arrive at 09:30 AM.\n- Bring the filled-out form called \"Nachweis der persönlichen Arbeitsbemühungen\" for September.\n\nIf you cannot come, call them before the meeting to explain why.\n\n## Important dates\n- **21.10.2026**: Your consultation meeting at 09:30 AM.\n\n## Money\nThere are no money amounts mentioned in this letter.\n\n## If I disagree or need help\nIf you have questions or feel unsure, you can call the RAV Musterstadt. If it is about money or your right to unemployment benefits, you can also ask for free advice from a local counselling service.",
+    "seconds": 5.5,
+    "critical_facts_preserved": null,
+    "has_structure": true,
+    "expected_script": "LATIN",
+    "script_share": 1.0,
+    "language_ok": true,
+    "chars": 828
+   },
+   "Ukrainian": {
+    "text": "## Що це за лист?\nЦе запрошення від служби зайнятості (RAV Musterstadt). Вони хочуть поговорити з вами про ваші пошуки роботи.\n\n## Що мені потрібно зробити?\n1. Прийти на зустріч 21.10.2026 о 09:30 ранку.\n2. Прийти в кабінет 2.14 в RAV Musterstadt.\n3. Взяти заповнену форму під назвою \"Nachweis der persönlichen Arbeitsbemühungen\" за вересень.\n4. Якщо ви не можете прийти, зателефонуйте їм до зустрічі, щоб пояснити причину.\n\n## Важливі дати\n- 21.10.2026: Ваша консультаційна зустріч о 09:30 ранку.\n\n## Гроші\nУ цьому листі не згадуються грошові суми.\n\n## Якщо я не згоден або потребую допомоги\nЯкщо ви не розумієте цей лист або не можете прийти на зустріч, ви можете попросити безкоштовну допомогу. Зверніться до місцевих консультаційних служб для шукачів роботи або соціальних служб. Вони можуть пояснити все вашою мовою.",
+    "seconds": 13.1,
+    "critical_facts_preserved": null,
+    "has_structure": true,
+    "expected_script": "CYRILLIC",
+    "script_share": 0.91,
+    "language_ok": true,
+    "chars": 821
+   },
+   "Tigrinya": {
+    "text": "## እንታይ እዩዚ ደብዳቤ?\nእዚ ደብዳቤ ካብ RAV (Regionales Arbeitsvermittlungszentrum) ናብ ሙስተርስታድት ዝተላእከ ዕዉድታ እዩ። ንስኻ ኣብ ስራሕ ምድላይካ ክዛረቡልካ ይደልዩ።\n\n## እንታይ ክገብር ኣለኒ?\nኣብ 21.10.2026 ኣብ ዝካየድ ውይይት ክትሕብእ ኣለካ፡\n- ናብ RAV Musterstadt, ክፍሊ 2.14 ንኺድ።\n- ኣብ 09:30 ንጎዓዝ።\n- ኣብ መጽሓፍ \"Nachweis der persönlichen Arbeitsbemühungen\" ዝበሃል ቅርጺ ንወርሒ መስከረም ተሓሊፉ ንምምጻእ።\n\n## ኣገደስቲ መዓልታት\n- **21.10.2026**: ኣብ RAV ዝካየድ ውይይትካ።\n\n## ገንዘብ\nኣብዚ ደብዳቤ ዝተጠቕሱ ገንዘባዊ መግለጺታት የለን።\n\n## እንተዘይተሰማማዕካ ወይ ሓገዝ እንተደሊኻ\nእንተዘይተኻኢልካ ኣብ ዝተወሰነ እዋን ክትሕብእ ኣለካ። ቅድሚ እዋንካ ናብ RAV ተደውልካ ንኸምኡ ንምንታይ ከምዘይትኽእ ኣበርክቶ።\nእንተደሊኻ ድማ፡ ኣብ መሰላትካ ወይ ገንዘብ ሓተታታ እንተሃለወካ፡ ካብ ዝኾነ ኣብ ከባቢኻ ዘሎ ናጽነት ዘለዎ ሓተታ ክትረክብ ትኽእል ኢኻ። እዚኦም ኣብ ቋንቋኻ ክገልጹልካ ይኽእሉ።",
+    "seconds": 35.1,
+    "critical_facts_preserved": null,
+    "has_structure": true,
+    "expected_script": "ETHIOPIC",
+    "script_share": 0.851,
+    "language_ok": true,
+    "tigrinya_markers": 40,
+    "amharic_markers": 1,
+    "detected": "tigrinya",
+    "chars": 649
+   },
+   "Arabic": {
+    "text": "## ما هي هذه الرسالة؟\nهذه الرسالة دعوة من RAV (مركز التوظيف الإقليمي)، وهو مركز وظائف في سويسرا. يريدون التحدث معك حول عملية البحث عن وظيفة.\n\n## ما الذي يتعين عليّ فعله؟\nيجب عليك حضور اجتماع في 21.10.2026.\n- اذهب إلى مكتب RAV في مدينة عينة.\n- اذهب إلى الغرفة 2.14.\n- الوصول في الساعة 09:30 صباحًا.\n- أحضر نموذجًا مكتملاً يسمى \"Nachweis der persönlichen Arbeitsbemühungen\" لشهر سبتمبر.\n\n## التواريخ المهمة\n- **21.10.2026**: اجتماع الاستشارات الخاص بك في RAV.\n\n## المال\nلا توجد مبالغ مالية مذكورة في هذه الرسالة.\n\n## إذا كنت غير موافق أو بحاجة إلى مساعدة\nإذا لم تتمكن من حضور الاجتماع، اتصل بـ RAV قبل التاريخ. إذا لم تحضر بدون سبب وجيه، قد تفقد جزءًا من أموال البطالة لبضعة أيام. إذا كنت غير متأكد من شيء ما، يمكنك طلب مساعدة مجانية من مراكز الاستشارات المحلية. يمكنهم شرح حقوقك بلغة بسيطة.",
+    "seconds": 12.8,
+    "critical_facts_preserved": null,
+    "has_structure": true,
+    "expected_script": "ARABIC",
+    "script_share": 0.905,
+    "language_ok": true,
+    "chars": 789
+   }
+  }
+ },
+ {
+  "id": "de_tax_return_reminder",
+  "lang": "de",
+  "extract_seconds": 6.4,
+  "facts": {
+   "sender": "Gemeindesteueramt Musterwil",
+   "letter_language": "de",
+   "letter_type": "tax",
+   "summary_en": "The Musterwil tax office is reminding Arben Exempel that his 2025 tax return has not been received and demanding its submission by 16 November 2026.",
+   "key_dates": [
+    {
+     "date": "2026-11-16",
+     "kind": "deadline",
+     "what": "Deadline to submit the 2025 tax return",
+     "verified": true
+    }
+   ],
+   "amounts": [
+    {
+     "value": 1000.0,
+     "currency": "CHF",
+     "what": "Potential maximum fine for late submission",
+     "verified": true
+    }
+   ],
+   "reference_numbers": [],
+   "actions": [
+    "Submit the fully completed 2025 tax return to the Gemeindesteueramt Musterwil by 16 November 2026."
+   ],
+   "urgency": "medium",
+   "warnings": []
+  },
+  "extraction": {
+   "type_correct": true,
+   "date_recall": 1.0,
+   "date_precision": 1.0,
+   "deadline_recall": 1.0,
+   "invented_dates": 0,
+   "amount_recall": 1.0,
+   "amount_precision": 1.0,
+   "invented_amounts": 0,
+   "action_recall": 1.0
+  },
+  "explanations": {
+   "English": {
+    "text": "## What is this letter?\nThis letter is from the tax office in Musterwil. They are asking you to send in your tax return for the year 2025. They have not yet received it.\n\n## What do I need to do?\nYou must send your fully completed 2025 tax return to the Gemeindesteueramt Musterwil. The deadline is 16.11.2026.\n\n## Important dates\n- Deadline: 16.11.2026 (You must send your tax return by this date).\n\n## Money\nIf you do not send the tax return on time, you might have to pay a fine. The fine can be up to CHF 1'000.00.\n\n## If I disagree or need help\nIf you have questions about this letter or cannot do this, please contact the Gemeindesteueramt Musterwil directly. If you feel unsure or need free advice, you can also ask for help from a local advice centre for residents.",
+    "seconds": 5.3,
+    "critical_facts_preserved": 1.0,
+    "has_structure": true,
+    "expected_script": "LATIN",
+    "script_share": 1.0,
+    "language_ok": true,
+    "chars": 773
+   },
+   "Ukrainian": {
+    "text": "## Що це за лист?\nЦей лист від податкової інспекції Мустервіл (Gemeindesteueramt Musterwil). Вони нагадують вам, що ваша податкова декларація за 2025 рік ще не надійшла. Вони просять вас надіслати її.\n\n## Що мені потрібно зробити?\nВи повинні надіслати повністю заповнену податкову декларацію за 2025 рік до податкової інспекції Мустервіл до встановленого терміну.\n\n## Важливі дати\nВи повинні подати податкову декларацію до **16.11.2026**.\n\n## Гроші\nЯкщо ви не надішлете декларацію вчасно, вас можуть оштрафувати на суму до **CHF 1'000.00**.\n\n## Якщо я не згоден або потребую допомоги\nЯкщо у вас є запитання щодо цього листа, ви можете зателефонувати до податкової інспекції Мустервіл. Якщо ви вважаєте, що штраф занадто високий або несправедливий, ви можете звернутися по допомогу до безкоштовного місцевого консультаційного центру для мешканців. Вони можуть пояснити ваші права простою мовою.",
+    "seconds": 14.5,
+    "critical_facts_preserved": 1.0,
+    "has_structure": true,
+    "expected_script": "CYRILLIC",
+    "script_share": 0.996,
+    "language_ok": true,
+    "chars": 893
+   },
+   "Tigrinya": {
+    "text": "## እንታይ እዩዚ ደብዳቤ?\nእዚ ደብዳቤ ካብ ትካል ግብሪ መስተርያዊ መንግስቲ ሙስተርዊል እዩ። ንግብሪ ምምላስካ ንዓመት 2025 ከተላእክ ከም እትጽዕር ይጽዕሩኻ። ክሳብ ሕጂ ኣይተቐብሎምን።\n\n## እንታይ ክገብር እየ?\nብምሉእ ዝተሰርሐ 2025 ግብሪ ምምላስካ ናብ Gemeindesteueramt Musterwil ክትልእኾ ኣለካ። መስርዕ ናብ **16.11.2026** እዩ።\n\n## ኣገደስቲ መዓልታት\nግብሪ ምምላስካ ክሳብ **16.11.2026** ክትልእኾ ኣለካ።\n\n## ገንዘብ\nእቲ ምምላስ ኣብ ግዜኡ እንተዘይተላእክዎ፡ ክሳብ **CHF 1'000.00** መቕጻዕቲ ክትሓልፍ ትኽእል ኢኻ።\n\n## እንተዘይተሰማማዕካ ወይ ተሓጋዝካ እትደሊ\nእንተዘይተኸኣለካ ክትኸፍል ወይ እንተዘይተሰማማዕካ ኣብ ከባቢኻ ዝርከብ ናጻ ኣማኸራት ኣገልግሎት ተወከስ። እዚ ደብዳቤ ኣይትዘንግዎ፡ መቕጻዕቲ ክህልዎ ይኽእል። ንዝያዳ ሓበሬታ ንመላእኽቲ እውን ክትሓትት ትኽእል ኢኻ።",
+    "seconds": 33.3,
+    "critical_facts_preserved": 1.0,
+    "has_structure": true,
+    "expected_script": "ETHIOPIC",
+    "script_share": 0.921,
+    "language_ok": true,
+    "tigrinya_markers": 31,
+    "amharic_markers": 1,
+    "detected": "tigrinya",
+    "chars": 534
+   },
+   "Arabic": {
+    "text": "## ما هي هذه الرسالة؟\nهذه رسالة تذكير من مكتب الضرائب في مستيرويل. يخبرونك بأن إقرارك الضريبي لعام 2025 لم يصل بعد. ويطلبون منك إرساله.\n\n## ما الذي يتعين عليّ فعله؟\nيجب عليك إرسال إقرارك الضريبي لعام 2025 المكتمل بالكامل إلى مكتب الضرائب في مستيرويل بحلول **16.11.2026**.\n\n## التواريخ المهمة\n- **الموعد النهائي**: 16.11.2026 (يجب أن ترسل إقرارك الضريبي بحلول هذا التاريخ)\n\n## المال\nإذا لم ترسل الإقرار الضريبي في الوقت المحدد، قد يتم تغريمك بما يصل إلى **CHF 1'000.00**.\n\n## إذا كنت غير موافق أو بحاجة إلى مساعدة\nإذا كانت لديك أسئلة أو شعرت بأن الموعد النهائي قصير جدًا، يمكنك الاتصال بمكتب الضرائب في مستيرويل. للحصول على مشورة مجانية، يمكنك أيضًا طلب المساعدة من مركز المشورة المحلي للمقيمين.",
+    "seconds": 10.9,
+    "critical_facts_preserved": 1.0,
+    "has_structure": true,
+    "expected_script": "ARABIC",
+    "script_share": 0.993,
+    "language_ok": true,
+    "chars": 694
+   }
+  }
+ },
+ {
+  "id": "fr_tax_documents",
+  "lang": "fr",
+  "extract_seconds": 5.1,
+  "facts": {
+   "sender": "Administration fiscale cantonale",
+   "letter_language": "fr",
+   "letter_type": "tax",
+   "summary_en": "The cantonal tax administration requests specific documents for the 2025 tax period to finalize the tax assessment.",
+   "key_dates": [
+    {
+     "date": "2026-11-20",
+     "kind": "deadline",
+     "what": "Deadline to submit salary certificate and childcare expense justifications",
+     "verified": true
+    }
+   ],
+   "amounts": [],
+   "reference_numbers": [
+    "41.552.903"
+   ],
+   "actions": [
+    "Submit the salary certificate from your employer for 2025 and justifications for childcare expenses to the cantonal tax administration by 20 November 2026 to avoid an official assessment."
+   ],
+   "urgency": "medium",
+   "warnings": []
+  },
+  "extraction": {
+   "type_correct": true,
+   "date_recall": 1.0,
+   "date_precision": 1.0,
+   "deadline_recall": 1.0,
+   "invented_dates": 0,
+   "amount_recall": null,
+   "amount_precision": null,
+   "invented_amounts": 0,
+   "action_recall": 1.0
+  },
+  "explanations": {
+   "English": {
+    "text": "## What is this letter?\nThis letter is from the cantonal tax office (Administration fiscale cantonale). They need some papers from you to finish your 2025 tax calculation.\n\n## What do I need to do?\nYou must send two things by **20.11.2026**:\n- A salary certificate from your employer for the year 2025.\n- Proof of your childcare costs.\n\n## Important dates\nYou must send the documents by **20.11.2026**.\n\n## Money\nThere are no money amounts mentioned in this letter.\n\n## If I disagree or need help\nIf you cannot send the documents or disagree with the request, you can ask for free help from a local advice centre. Do not ignore this letter, as they may decide your taxes without your information.",
+    "seconds": 4.5,
+    "critical_facts_preserved": 1.0,
+    "has_structure": true,
+    "expected_script": "LATIN",
+    "script_share": 1.0,
+    "language_ok": true,
+    "chars": 696
+   },
+   "Ukrainian": {
+    "text": "## Що це за лист?\nЦе офіційний лист від кантонального податкового органу (Administration fiscale cantonale). Вони потребують деякі документи від вас, щоб завершити вашу податкову оцінку за 2025 рік.\n\n## Що мені потрібно зробити?\nВи повинні надіслати дві речі до **20.11.2026**:\n- Посвідчення про заробітну плату від вашого роботодавця за 2025 рік.\n- Доказ ваших витрат на догляд за дітьми.\n\n## Важливі дати\nВи повинні надіслати ці документи до **20.11.2026**.\n\n## Гроші\nУ цьому листі не згадуються грошові суми.\n\n## Якщо я не згоден або потребую допомоги\nЯкщо ви не можете надіслати ці документи або не згодні з чимось, ви можете подати заперечення (Einsprache). Для безкоштовної допомоги зверніться до місцевого консультаційного центру для мешканців. Вони можуть пояснити ваші права простою мовою.",
+    "seconds": 12.8,
+    "critical_facts_preserved": 1.0,
+    "has_structure": true,
+    "expected_script": "CYRILLIC",
+    "script_share": 1.0,
+    "language_ok": true,
+    "chars": 798
+   },
+   "Tigrinya": {
+    "text": "## እንታይ እዩዚ ደብዳቤ?\nእዚ ደብዳቤ ካብ ካንቶናል ቁጠባ ቤት (Administration fiscale cantonale) እዩ። ንኽሳቶም 2025 ዓመት ቁጠባኻ ንምዕጻው መረዳእታ የድልዮም።\n\n## እንታይ ክገብር ኣለኒ?\nክትሰድድ ዘለካ ነገራት ኣለዉ፡ **20.11.2026** ኣብ ውሽጡ ክትሰድዶም ኣለካ፡\n- ካብ ኣስራሕተኻ ዝመጸ ዓመት 2025 ደረጃ ደሞምክ።\n- ናይ ህጻናት ኣካያያያዊ ወጻኢታትካ መረጋገጺ።\n\n## ኣገደስቲ መዓልታት\nነዞም ደቂቕሉ፡ **20.11.2026** ኣብ ውሽጡ ክትሰድዶም ኣለካ።\n\n## ገንዘብ\nኣብዚ ደብዳቤ ዝተጠቕሰ ገንዘብ የለን።\n\n## እንተዘይተሰማማዕካ ወይ ተሓጋዝካ እትደሊ\nእቶም ደቂቕሉ ክትሰድዶም እንተዘይትኽእል ወይ እንተዘይተሰማማዕካ፡ ተሓጋዝ ክትሓትት ትኽእል ኢኻ። ካብ ካንቶናል ቁጠባ ቤት ክትሓትት ወይ ናይ ነጻ ዝርዝር ሓተታ ክትረክብ ትኽእል ኢኻ። ኣብ መዓልቲ መወዳእታ እንተዘይተሓተትካ፡ ንኽሳቶም ቁጠባኻ ኣብ ዘይምርዳእካ ክሕሰቡኻ እዮም።",
+    "seconds": 32.9,
+    "critical_facts_preserved": 1.0,
+    "has_structure": true,
+    "expected_script": "ETHIOPIC",
+    "script_share": 1.0,
+    "language_ok": true,
+    "tigrinya_markers": 30,
+    "amharic_markers": 0,
+    "detected": "tigrinya",
+    "chars": 558
+   },
+   "Arabic": {
+    "text": "## ما هي هذه الرسالة؟\nهذه الرسالة من مكتب الضرائب الإقليمي (الإدارة الضريبية الكانتونية). يحتاجون إلى معلومات لإتمام حساب ضرائبك لعام 2025.\n\n## ما الذي يتعين عليّ فعله؟\nيجب عليك إرسال شيئين بحلول **20.11.2026**:\n- شهادة راتب من صاحب عملك عن عام 2025.\n- إثبات تكاليف رعاية الأطفال.\n\n## التواريخ المهمة\nيجب عليك إرسال المستندات بحلول **20.11.2026**.\n\n## المال\nلا توجد مبالغ مالية مذكورة في هذه الرسالة.\n\n## إذا كنت غير موافق أو بحاجة إلى مساعدة\nإذا لم تتمكن من إرسال المستندات أو كنت غير موافق على الطلب، يمكنك طلب المساعدة. قد ترغب في التحدث إلى مركز استشارات مجاني محلي للمقيمين. يمكنهم شرح حقوقك بلغة بسيطة. لا تتجاهل هذه الرسالة، لأنهم سيقررون ضرائبك بدون معلوماتك إذا لم ترد.",
+    "seconds": 12.0,
+    "critical_facts_preserved": 1.0,
+    "has_structure": true,
+    "expected_script": "ARABIC",
+    "script_share": 1.0,
+    "language_ok": true,
+    "chars": 678
+   }
+  }
+ },
+ {
+  "id": "fr_school_camp",
+  "lang": "fr",
+  "extract_seconds": 8.8,
+  "facts": {
+   "sender": "Établissement scolaire de Villemodèle",
+   "letter_language": "fr",
+   "letter_type": "school",
+   "summary_en": "The school invites parents of Noah Exemple to an information session about the ski camp on November 5, 2026, and requests confirmation of attendance by October 28, 2026.",
+   "key_dates": [
+    {
+     "date": "2026-10-28",
+     "kind": "deadline",
+     "what": "Confirmation of attendance for ski camp info session",
+     "verified": true
+    },
+    {
+     "date": "2026-11-05",
+     "kind": "appointment",
+     "what": "Ski camp information session at school",
+     "verified": true
+    },
+    {
+     "date": "2026-11-15",
+     "kind": "deadline",
+     "what": "Payment of CHF 180.00 for ski camp participation",
+     "verified": true
+    }
+   ],
+   "amounts": [
+    {
+     "value": 180.0,
+     "currency": "CHF",
+     "what": "Parental contribution for ski camp",
+     "verified": true
+    }
+   ],
+   "reference_numbers": [],
+   "actions": [
+    "Confirm attendance for the ski camp information session by October 28, 2026, using the attached reply coupon.",
+    "Pay CHF 180.00 for the ski camp by November 15, 2026.",
+    "Contact the school administration confidentially if the payment is a financial difficulty."
+   ],
+   "urgency": "low",
+   "warnings": []
+  },
+  "extraction": {
+   "type_correct": true,
+   "date_recall": 1.0,
+   "date_precision": 1.0,
+   "deadline_recall": 1.0,
+   "invented_dates": 0,
+   "amount_recall": 1.0,
+   "amount_precision": 1.0,
+   "invented_amounts": 0,
+   "action_recall": 1.0
+  },
+  "explanations": {
+   "English": {
+    "text": "## What is this letter?\nThis letter is from your child's school. They are inviting you to a meeting about a ski camp. They want you to tell them if you will come to this meeting.\n\n## What do I need to do?\nYou must confirm if you will attend the ski camp information session. Use the reply slip (coupon-réponse) that came with the letter. Send it back by **28.10.2026**.\n\nYou also need to pay money for the ski camp. The amount is **CHF 180.00**. You must pay this by **15.11.2026**.\n\n## Important dates\n- **28.10.2026**: Deadline to say if you will attend the meeting.\n- **05.11.2026**: The ski camp information session at school.\n- **15.11.2026**: Deadline to pay the CHF 180.00.\n\n## Money\nYou need to pay **CHF 180.00** for the ski camp. You must pay this by **15.11.2026**.\n\n## If I disagree or need help\nIf you cannot pay this money, you can contact the school administration. They will keep your conversation private. You can also ask for free help from local advice centres if you need support with money or legal matters.",
+    "seconds": 7.2,
+    "critical_facts_preserved": 1.0,
+    "has_structure": true,
+    "expected_script": "LATIN",
+    "script_share": 1.0,
+    "language_ok": true,
+    "chars": 1028
+   },
+   "Ukrainian": {
+    "text": "## Що це за лист?\nЦей лист від школи вашої дитини. Вони запрошують вас на зустріч щодо лижного табору. Вони також просять вас повідомити, чи прийдете ви, і сплатити за табір.\n\n## Що мені потрібно зробити?\n1. Повідомте школу, чи будете ви відвідувати інформаційне засідання. Використайте купон для відповіді, який додавався до листа.\n2. Надішліть цю відповідь до **28.10.2026**.\n3. Сплатіть **CHF 180.00** за лижний табір.\n4. Надішліть кошти до **15.11.2026**.\n\n## Важливі дати\n- **28.10.2026**: Крайній термін для підтвердження вашої участі у зустрічі.\n- **05.11.2026**: Інформаційне засідання щодо лижного табору в школі.\n- **15.11.2026**: Крайній термін для сплати CHF 180.00.\n\n## Кошти\nВам потрібно сплатити **CHF 180.00** за лижний табір вашої дитини. Ви повинні сплатити цю суму до **15.11.2026**.\n\n## Якщо я не згоден або потребую допомоги\nЯкщо ви не можете дозволити собі сплатити CHF 180.00, ви можете зв'язатися з адміністрацією школи. У листі сказано робити це конфіденційно. Для отримання додаткової допомоги ви також можете звернутися до безкоштовного місцевого консультаційного центру щодо фінансових або шкільних питань.",
+    "seconds": 19.9,
+    "critical_facts_preserved": 1.0,
+    "has_structure": true,
+    "expected_script": "CYRILLIC",
+    "script_share": 0.985,
+    "language_ok": true,
+    "chars": 1134
+   },
+   "Tigrinya": {
+    "text": "## ዕማም እዚ ዝኾነ ደብዳቤ እንታይ እዩ?\nእዚ ካብ ቤት ትምህርቲ ውዕላትካ ዝመጸ ደብዳቤ እዩ። ንሓደ ምስ ማሕበር ዝግበር ዕላማ ስኪ ክምዕብል ዝኸውን ሰሚናር ንኽትሕብእ እዮም ዘዘኻኽሩካ። ከምኡ’ውን ንዕላማ እቲ ሰሚናር ክትሕብእን ንዕላማ እቲ ስኪ ክምዕብል ዝኸውን ገንዘብ ክትኸፍልን እዮም ዘዘኻኽሩካ።\n\n## እንታይ ክገብር እየ?\n1. ንቤት ትምህርቲ ንኽትሕብሮም ኣብ ዕላማ ስኪ ክምዕብል ከም እትኽእል ኣፍልጦ ምሃብ፡\n   - **28.10.2026** ኣብ ዝሓለፈ ክትገብሮ ኣለካ።\n   - ነቲ ኣብ ደብዳቤ ዝመጸ ምላሽ ካልኢት ተጠቐም።\n2. ንዕላማ ስኪ ክምዕብል ገንዘብ ኣኸፍል፡\n   - እቲ ዕዳ **CHF 180.00** እዩ።\n   - **15.11.2026** ኣብ ዝሓለፈ ክትኸፍሎ ኣለካ።\n3. እቲ ገንዘብ ክትኸፍሎ እንተዘይትኽእል፡ ናብ ቤት ትምህርቲ ተዛረብ፡\n   - ኣብ ጸጥታ ኣብ እዋን ስራሕ ኣብ እትረክብ እዋን ኣብ ምስ ዳይሬክተር ቤት ትምህርቲ ክትዛረብ ትኽእል ኢኻ።\n\n## ኣገደስቲ መዓልታት\n- **28.10.2026**: ኣብ ዕላማ ስኪ ክምዕብል ከም እትኽእል ክትሕብር ዝኸውን መዓስከር።\n- **05.11.2026**: እቲ ዕላማ ስኪ ክምዕብል ዝኸውን ሰሚናር ኣብ ቤት ትምህርቲ ዝካየድ መዓልቲ።\n- **15.11.2026**: CHF 180.00 ንዕላማ ስኪ ክምዕብል ክት",
+    "seconds": 46.0,
+    "critical_facts_preserved": 1.0,
+    "has_structure": false,
+    "expected_script": "ETHIOPIC",
+    "script_share": 0.987,
+    "language_ok": true,
+    "tigrinya_markers": 38,
+    "amharic_markers": 0,
+    "detected": "tigrinya",
+    "chars": 747
+   },
+   "Arabic": {
+    "text": "## ما هي هذه الرسالة؟\nهذه رسالة من مدرسة طفلك. يدعوك فيها إلى اجتماع حول معسكر التزلج.\n\n## ما الذي يتعين عليّ فعله؟\nعليك:\n1. إخبار المدرسة ما إذا كنت ستحضر جلسة المعلومات بحلول 28.10.2026. استخدم استمارة الرد التي جاءت مع الرسالة.\n2. دفع مبلغ CHF 180.00 مقابل معسكر التزلج بحلول 15.11.2026.\n3. إذا لم تتمكن من دفع المبلغ، اتصل بإدارة المدرسة للحصول على المساعدة. يمكنك ذلك بشكل خاص.\n\n## التواريخ المهمة\n- 28.10.2026: الموعد النهائي للإعلان عما إذا كنت ستحضر اجتماع معسكر التزلج.\n- 05.11.2026: تاريخ جلسة معلومات معسكر التزلج في المدرسة.\n- 15.11.2026: الموعد النهائي لدفع مبلغ CHF 180.00 مقابل معسكر التزلج.\n\n## المال\nعليك دفع مبلغ CHF 180.00 مقابل معسكر التزلج. يجب أن تدفعه بحلول 15.11.2026.\n\n## إذا كنت غير موافق أو بحاجة إلى مساعدة\nإذا لم تتمكن من دفع المبلغ، اتصل بإدارة المدرسة. يمكنهم مساعدتك بشكل خاص. بالنسبة إلى مشاكل مالية خطيرة، قد ترغب في التحدث إلى مركز استشارات محلية مجاني.",
+    "seconds": 14.9,
+    "critical_facts_preserved": 1.0,
+    "has_structure": true,
+    "expected_script": "ARABIC",
+    "script_share": 0.985,
+    "language_ok": true,
+    "chars": 888
+   }
+  }
+ },
+ {
+  "id": "fr_rent_increase",
+  "lang": "fr",
+  "extract_seconds": 6.4,
+  "facts": {
+   "sender": "Régie Immobilière Modèle SA",
+   "letter_language": "fr",
+   "letter_type": "housing",
+   "summary_en": "The landlord notifies a rent increase for the apartment from January 1, 2027, due to a rise in the reference mortgage rate.",
+   "key_dates": [
+    {
+     "date": "2027-01-01",
+     "kind": "effective",
+     "what": "New rent amount becomes effective",
+     "verified": true
+    }
+   ],
+   "amounts": [
+    {
+     "value": 1715.0,
+     "currency": "CHF",
+     "what": "New monthly net rent from January 1, 2027",
+     "verified": true
+    }
+   ],
+   "reference_numbers": [
+    "RM-7781"
+   ],
+   "actions": [
+    "Contest the rent increase within 30 days of receiving this letter by filing with the rental conciliation commission if you believe it is abusive."
+   ],
+   "urgency": "medium",
+   "warnings": []
+  },
+  "extraction": {
+   "type_correct": true,
+   "date_recall": 1.0,
+   "date_precision": 1.0,
+   "deadline_recall": null,
+   "invented_dates": 0,
+   "amount_recall": 0.5,
+   "amount_precision": 1.0,
+   "invented_amounts": 0,
+   "action_recall": 1.0
+  },
+  "explanations": {
+   "English": {
+    "text": "## What is this letter?\nThis letter is from your landlord. They are telling you that your rent will go up. Starting on 01.01.2027, your new monthly rent will be CHF 1'715.00. The reason for the increase is a rise in the reference mortgage rate.\n\n## What do I need to do?\nIf you think this rent increase is too high or unfair, you can challenge it. You must do this within 30 days of getting this letter. You need to file a complaint with the rental conciliation commission.\n\n## Important dates\nThe new rent amount becomes effective on: 01.01.2027\nYou have 30 days from the day you receive this letter to contest the increase.\n\n## Money\nYour current monthly rent is CHF 1'640.00.\nYour new monthly rent will be CHF 1'715.00.\n\n## If I disagree or need help\nIf you disagree with the rent increase, you can contest it at the rental conciliation commission. This is free to do. If you are unsure about your rights or need help, you can seek free advice from a local tenants' association or legal aid office. Do not ignore this letter if you wish to challenge the increase.",
+    "seconds": 6.8,
+    "critical_facts_preserved": 1.0,
+    "has_structure": true,
+    "expected_script": "LATIN",
+    "script_share": 1.0,
+    "language_ok": true,
+    "chars": 1066
+   },
+   "Ukrainian": {
+    "text": "## Що це за лист?\nЦей лист від вашого орендодавця. У ньому повідомляється, що ваша орендна плата зросте. Починаючи з 01.01.2027, ваша нова щомісячна орендна плата становитиме CHF 1'715.00. Причина підвищення — зростання базової облікової ставки.\n\n## Що мені потрібно зробити?\nЯкщо ви вважаєте, що це підвищення орендної плати несправедливе (зловживання), ви можете оскаржити його. Це потрібно зробити протягом 30 днів після отримання цього листа. Вам необхідно подати скаргу до комісії з примирення з питань оренди.\n\n## Важливі дати\nНова сума орендної плати набуває чинності з 01.01.2027. У вас є 30 днів з моменту отримання цього листа, щоб подати скаргу, якщо ви не згодні.\n\n## Гроші\nВаша поточна орендна плата становить CHF 1'640.00 на місяць. Ваша нова орендна плата становитиме CHF 1'715.00 на місяць з 01.01.2027.\n\n## Якщо я не згоден або потребую допомоги\nЯкщо ви не згодні з підвищенням, ви можете оскаржити його в комісії з примирення з питань оренди протягом 30 днів. Якщо ви не впевнені у своїх правах або процедурі, варто звернутися за безкоштовною консультацією до місцевого центру житлової допомоги. Вони допоможуть вам зрозуміти ваші можливості.",
+    "seconds": 18.7,
+    "critical_facts_preserved": 1.0,
+    "has_structure": true,
+    "expected_script": "CYRILLIC",
+    "script_share": 0.99,
+    "language_ok": true,
+    "chars": 1160
+   },
+   "Tigrinya": {
+    "text": "## እዚ ዝተሓተተ ደብዳቤ እንታይ እዩ?\nእዚ ደብዳቤ ካብ ኣባልካ እዩ። ንናይ ኣንፅሕናኻ ክፍሊ ከዕቢ ከም ዝኸውን እዩ ዝሕብር። ካብ 01.01.2027 ጀሚሩ፡ ዝኾነ ወርሒ ናይ ኣንፅሕናኻ ክፍሊ CHF 1'715.00 እዩ። እቲ ምኽንያት ዝዓበየ ዝኾነ ዓቐን ናይ ብድሆ ናይ ብድሆ እዩ።\n\n## እንታይ ክገብር እየ?\nእቲ ዝተዓብለለ ናይ ኣንፅሕና ዕብየት ከዕቢ ከም ዘይብሉ እንተተሓሲብካ፡ ኣይትቀበሎ። እዚ ከተግብር ኣብ ዝተሓተተ ደብዳቤ እትረክብዎ ዕለታት ውሽጢ 30 መዓልታት ኣለካ። ንናይ ኣንፅሕና ምትዕርራይ ኮሚሽን ክትተሓትት ኣለካ።\n\n## ኣገደስቲ ዕለታት\nእቲ ክፍሊ ኣንፅሕና ካብ 01.01.2027 ጀሚሩ ይሕሰም። ንናይ ኣንፅሕና ዕብየት ክትቃወም እንተደሊኻ፡ ካብ እትረክብዎ ዕለታት ውሽጢ 30 መዓልታት ኣለካ።\n\n## ገንዘብ\nእቲ ኣሁኒ ዝኸፍሉ ናይ ኣንፅሕና ክፍሊ ዝኾነ ወርሒ CHF 1'640.00 እዩ። እቲ ክፍሊ ኣንፅሕናኻ ድማ ዝኾነ ወርሒ CHF 1'715.00 እዩ።\n\n## እንተዘይተሰማማዕካ ወይ ተሓጋዝካ እንተደሊኻ\nእቲ ዝተዓብለለ ናይ ኣንፅሕና ዕብየት እንተዘይተሰማማዕካ፡ ናብ ናይ ኣንፅሕና ምትዕርራይ ኮሚሽን ክትኸይድ ትኽእል። እዚ ንነጋዶ ዝሕግዝ ናጻ ኣገልግሎት እዩ። ብዛዕ",
+    "seconds": 42.4,
+    "critical_facts_preserved": 1.0,
+    "has_structure": true,
+    "expected_script": "ETHIOPIC",
+    "script_share": 0.981,
+    "language_ok": true,
+    "tigrinya_markers": 53,
+    "amharic_markers": 0,
+    "detected": "tigrinya",
+    "chars": 689
+   },
+   "Arabic": {
+    "text": "## ما هي هذه الرسالة؟\nهذه الرسالة من مالك العقار، شركة Régie Immobilière Modèle SA. يخبرونك فيها أن إيجارك سيرتفع.\n\n## ما الذي يتعين عليّ فعله؟\nسيتم زيادة إيجارك اعتبارًا من 01.01.2027. المبلغ الجديد هو CHF 1'715.00 شهريًا.\n\nإذا كنت تعتقد أن زيادة الإيجار هذه مرتفعة جدًا أو غير عادلة، يمكنك الطعن فيها. يجب عليك القيام بذلك خلال 30 يومًا من استلام هذه الرسالة. تحتاج إلى تقديم شكوى إلى لجنة التوفيق الإيجاري.\n\n## التواريخ المهمة\nيبدأ المبلغ الجديد للإيجار في: 01.01.2027.\nلديك 30 يومًا من يوم استلامك لهذه الرسالة للاعتراض على الزيادة.\n\n## المال\nإيجارك الحالي هو CHF 1'640.00 شهريًا.\nسيكون إيجارك الجديد CHF 1'715.00 شهريًا.\n\n## إذا كنت غير موافق أو بحاجة إلى مساعدة\nإذا كنت غير موافق على زيادة الإيجار، يمكنك الطعن فيها. يجب عليك الاتصال بلجنة التوفيق الإيجاري خلال 30 يومًا.\n\nإذا كنت غير متأكد من حقوقك أو بحاجة إلى مساعدة، يمكنك الحصول على مشورة مجانية من خدمات النصيحة السكنية المحلية. يمكنهم شرح خياراتك بطريقة بسيطة.",
+    "seconds": 14.0,
+    "critical_facts_preserved": 1.0,
+    "has_structure": true,
+    "expected_script": "ARABIC",
+    "script_share": 0.951,
+    "language_ok": true,
+    "chars": 923
+   }
+  }
+ },
+ {
+  "id": "it_premium_reduction",
+  "lang": "it",
+  "extract_seconds": 5.1,
+  "facts": {
+   "sender": "Istituto delle assicurazioni sociali",
+   "letter_language": "it",
+   "letter_type": "health_insurance",
+   "summary_en": "The Istituto delle assicurazioni sociali requests missing documents to process the 2027 health insurance premium reduction application.",
+   "key_dates": [
+    {
+     "date": "2026-11-15",
+     "kind": "deadline",
+     "what": "Deadline to submit missing documents (taxation decision 2025 and 2027 health insurance policy)",
+     "verified": true
+    }
+   ],
+   "amounts": [],
+   "reference_numbers": [
+    "RIPAM-2027-30418"
+   ],
+   "actions": [
+    "Submit a copy of the 2025 tax assessment and the 2027 health insurance policy by 15 November 2026 to avoid the application being considered withdrawn."
+   ],
+   "urgency": "medium",
+   "warnings": []
+  },
+  "extraction": {
+   "type_correct": false,
+   "date_recall": 1.0,
+   "date_precision": 1.0,
+   "deadline_recall": 1.0,
+   "invented_dates": 0,
+   "amount_recall": null,
+   "amount_precision": null,
+   "invented_amounts": 0,
+   "action_recall": 1.0
+  },
+  "explanations": {
+   "English": {
+    "text": "## What is this letter?\nThis letter is from the social insurance institute (Istituto delle assicurazioni sociali). They are asking you for some documents to process your request for a reduction in your 2027 health insurance premiums.\n\n## What do I need to do?\nYou must send two documents by the deadline:\n- A copy of your 2025 tax assessment.\n- A copy of your 2027 health insurance policy.\n\nYou must send these documents by **15.11.2026**.\n\n## Important dates\n- Deadline: **15.11.2026** (15.11.2026)\n\n## Money\nThere are no money amounts to pay or refund in this letter.\n\n## If I disagree or need help\nIf you cannot find these documents or have questions, you can contact the sender for help. For important matters like this, you can also ask for free advice from a local advice centre. They can help you understand your rights and duties.",
+    "seconds": 5.7,
+    "critical_facts_preserved": 1.0,
+    "has_structure": true,
+    "expected_script": "LATIN",
+    "script_share": 1.0,
+    "language_ok": true,
+    "chars": 838
+   },
+   "Ukrainian": {
+    "text": "## Що це за лист?\nЦей лист від Istituto delle assicurazioni sociali (соціального страхового інституту). Вони просять вас надати деякі документи для обробки вашої заяви про зниження страхового внеску за медичне страхування на 2027 рік.\n\n## Що мені потрібно зробити?\nВи повинні надіслати два документи до встановленого терміну:\n- Копію вашої податкової оцінки за 2025 рік (decisione di tassazione 2025).\n- Копію вашого поліса медичного страхування на 2027 рік (polizza della cassa malati per il 2027).\n\nВи повинні надіслати ці документи до **15.11.2026**.\n\n## Важливі дати\n- **Термін надання документів:** 15.11.2026\n\n## Гроші\nУ цьому листі не згадуються жодні грошові суми.\n\n## Якщо я не згоден або потребую допомоги\nЯкщо ви не можете надіслати документи або маєте запитання, ви можете звернутися за допомогою до відправника. У важливих питаннях такого роду ви також можете отримати безкоштовну консультацію у місцевих соціальних служб або бюро правової допомоги.",
+    "seconds": 14.7,
+    "critical_facts_preserved": 1.0,
+    "has_structure": true,
+    "expected_script": "CYRILLIC",
+    "script_share": 0.95,
+    "language_ok": true,
+    "chars": 962
+   },
+   "Tigrinya": {
+    "text": "## እዚ ደብዳቤ እንታይ እዩ?\nእዚ ደብዳቤ ካብ Istituto delle assicurazioni sociali (ማሕበራዊ ኣማራጺ ቤት) እዩ። ንሕቶ ምንካይ 2027 ጥዕና ኣማራጺ ክፍሊ ንምሕላው ገለ ሰነዳት ንኸቕርብ ይጽዕሩኻ።\n\n## እንታይ ክገብር እየ?\nኣብ ዝተወሰነ መዓልቲ ክልተ ሰነዳት ክትሰድዮም ኣለካ፡\n- ናይ 2025 ቀረጽ ምኽፋል ቅጽበታዊ ቅጂ።\n- ናይ 2027 ጥዕና ኣማራጺ ፖሊሲ ቅጽበታዊ ቅጂ።\n\nእዞም ሰነዳት ኣብ **15.11.2026** ክትሰድዮም ኣለካ።\n\n## ኣገደስቲ መዓልታት\n- መስርዕ: **15.11.2026**\n\n## ገንዘብ\nኣብዚ ደብዳቤ ክትኸፍል ወይ ክትረክብ እትኽእል ገንዘብ የለን።\n\n## እታዎ እንተዘይተዓዘብካ ወይ ተሓጋዝካ እንተደሊኻ\nእቶም ሰነዳት እንተዘይተረኺብካ ወይ ሕቶታት እንተሃልዩካ፡ ናብ Istituto delle assicurazioni sociali ክትራኸብ ትኽእል ኢኻ። ከምዚ ዝኣመሰለ ኣገዳሲ ነገራት ንዘለካ ናጽነት ዘለዎ ሓገዝ ካብ ከባቢኻ ዝርከብ ማሕበራዊ ናይ ምኽሪ ማእከል ክትሓቱ ትኽእል ኢኻ።",
+    "seconds": 33.2,
+    "critical_facts_preserved": 1.0,
+    "has_structure": true,
+    "expected_script": "ETHIOPIC",
+    "script_share": 0.834,
+    "language_ok": true,
+    "tigrinya_markers": 28,
+    "amharic_markers": 1,
+    "detected": "tigrinya",
+    "chars": 594
+   },
+   "Arabic": {
+    "text": "## ما هي هذه الرسالة؟\nهذه الرسالة من مكتب التأمين الصحي (Istituto delle assicurazioni sociali). يطلبون بعض المستندات لمعالجة طلبك للحصول على تخفيض في أقساط التأمين الصحي الخاصة بك لعام 2027.\n\n## ما الذي يتعين عليّ فعله؟\nيجب عليك إرسال مستندين بحلول الموعد النهائي:\n- نسخة من تقييم ضرائبك لعام 2025.\n- نسخة من بوليصة التأمين الصحي الخاصة بك لعام 2027.\n\nيجب عليك إرسال هذه المستندات بحلول **15.11.2026**.\n\n## التواريخ المهمة\nالموعد النهائي لإرسال المستندات هو **15.11.2026**.\n\n## المال\nلا توجد مبالغ مالية مذكورة في هذه الرسالة.\n\n## إذا كنت غير موافق أو بحاجة إلى مساعدة\nإذا لم تتمكن من إرسال المستندات أو كان لديك أسئلة، يمكنك التواصل مع المرسل. للحصول على مساعدة مجانية فيما يتعلق بالتأمين الصحي أو القضايا القانونية، ابحث عن خدمات الاستشارات المحلية في منطقتك.",
+    "seconds": 10.2,
+    "critical_facts_preserved": 1.0,
+    "has_structure": true,
+    "expected_script": "ARABIC",
+    "script_share": 1.0,
+    "language_ok": true,
+    "chars": 761
+   }
+  }
+ },
+ {
+  "id": "it_speeding_fine",
+  "lang": "it",
+  "extract_seconds": 6.2,
+  "facts": {
+   "sender": "Polizia cantonale",
+   "letter_language": "it",
+   "letter_type": "fine",
+   "summary_en": "A disciplinary fine of CHF 250.00 is issued for speeding 71 km/h in a 50 km/h zone on 14.09.2026.",
+   "key_dates": [
+    {
+     "date": "2026-11-10",
+     "kind": "deadline",
+     "what": "Payment deadline for the fine",
+     "verified": true
+    }
+   ],
+   "amounts": [
+    {
+     "value": 250.0,
+     "currency": "CHF",
+     "what": "Fine amount for speeding violation",
+     "verified": true
+    }
+   ],
+   "reference_numbers": [
+    "MD-26-77310"
+   ],
+   "actions": [
+    "Pay CHF 250.00 by 10.11.2026",
+    "Submit a written objection by 10.11.2026 if you were not driving or contest the infraction"
+   ],
+   "urgency": "medium",
+   "warnings": []
+  },
+  "extraction": {
+   "type_correct": true,
+   "date_recall": 0.5,
+   "date_precision": 1.0,
+   "deadline_recall": 1.0,
+   "invented_dates": 0,
+   "amount_recall": 1.0,
+   "amount_precision": 1.0,
+   "invented_amounts": 0,
+   "action_recall": 1.0
+  },
+  "explanations": {
+   "English": {
+    "text": "## What is this letter?\nThis is an official fine letter from the cantonal police (Polizia cantonale). They say your car was speeding. On 14.09.2026, your car was going 71 km/h in a 50 km/h zone. They gave you a fine of CHF 250.00.\n\n## What do I need to do?\nYou have two choices by the deadline of 10.11.2026:\n1. Pay the fine of CHF 250.00.\n2. If you were not driving, or if you disagree with the fine, write a letter to object (called an opposizione). Send it by the same date.\n\n## Important dates\nThe key date is **10.11.2026**. This is the last day to pay the fine or to send your objection letter.\n\n## Money\nYou owe **CHF 250.00**. This must be paid by 10.11.2026.\n\n## If I disagree or need help\nIf you think the fine is wrong, you can write an objection letter by 10.11.2026. If you are unsure about your rights or need help, you can ask for free advice from a local legal aid office or a consumer protection group. Do not ignore this letter, as they may start a criminal procedure if you do nothing.",
+    "seconds": 7.7,
+    "critical_facts_preserved": 1.0,
+    "has_structure": true,
+    "expected_script": "LATIN",
+    "script_share": 1.0,
+    "language_ok": true,
+    "chars": 1004
+   },
+   "Ukrainian": {
+    "text": "## Що це за лист?\nЦе офіційний лист про штраф від кантональної поліції (Polizia cantonale). Вони повідомляють, що ваш автомобіль 14.09.2026 перевищив швидкість. Він рухався зі швидкістю 71 км/год у зоні, де дозволено 50 км/год. Вам виписують штраф у розмірі CHF 250.00.\n\n## Що мені потрібно зробити?\nВи повинні сплатити CHF 250.00 до 10.11.2026.\nЯкщо ви не були за кермом або не згодні зі штрафом, ви повинні надіслати письмову заяву про заперечення (opposizione) до 10.11.2026.\n\n## Важливі дати\nВи повинні вчинити дії до **10.11.2026**. Це крайній термін для сплати та для надсилання заперечення.\n\n## Гроші\nВи винні **CHF 250.00**. Сплатіть цю суму до встановленого терміну.\n\n## Якщо я не згоден або потребую допомоги\nЯкщо ви не були за кермом або вважаєте, що штраф виписаний неправильно, ви можете написати заперечення до 10.11.2026. Надішліть його поліції, використовуючи номер референції MD-26-77310.\n\nЯкщо ви не впевнені або потребуєте допомоги, зверніться до безкоштовного місцевого консультаційного центру. Вони можуть пояснити ваші права. Не ігноруйте цей лист, оскільки це може призвести до більш серйозних проблем.",
+    "seconds": 18.2,
+    "critical_facts_preserved": 1.0,
+    "has_structure": true,
+    "expected_script": "CYRILLIC",
+    "script_share": 0.986,
+    "language_ok": true,
+    "chars": 1125
+   },
+   "Tigrinya": {
+    "text": "## እዚ ዝተሓተተ ደብዳቤ እንታይ እዩ?\nእዚ ካብ ካንተናል ፖሊስ (Polizia cantonale) ዝመጸ ቅኑዕ ደብዳቤ ናይ ቅጫ እዩ። ኣብ 14.09.2026 ብናይቲ ካንተን ፖሊስ እቲ መኪናኻ ኣብ ዝተወሰነ ቦታ ንላዕሊ ክፍጠር ተማሪኡ እዩ። ኣብ 50 ኪ.ሜ/ሰዓት ዝተወሰነ ቦታ እናተዘውርካ 71 ኪ.ሜ/ሰዓት እናሃረመካ ነይሩ። ንቅጫ CHF 250.00 ክትኸፍሎ እዮም ዘዘኻኽሩካ።\n\n## እንታይ ክገብር እየ?\nኣብ 10.11.2026 ዝሓለፈ መስመር ቀረባ ብኸባብ ካብዞም ክልተ ምንቅስቓስ ሓደ ክትገብር ትኽእል ኢኻ፡\n1. እቲ ቅጫ CHF 250.00 ክትኸፍሎ።\n2. እቲ መኪና ኣይነደድካን ወይ እቲ ቅጫ ኣይትስምዖን እንተኾንካ፡ ንቅጫ ንምቅላል (እዚ ናይ ቅጫ ተቓውሞ ይበሃል) ደብዳቤ ክትጽሕፎ ትኽእል ኢኻ። እዚ ደብዳቤ እውን ኣብ እቲ ካብ ዝተወሰነ መስመር ቀረባ ብእዋኑ ክትሰድዮ ኣለካ።\n\n## ኣገደስቲ መዓልታት\nመስመር ቀረባ **10.11.2026** እዩ። እዚ እቲ ቅጫ ክትኸፍሎ ወይ ደብዳቤ ተቓውሞ ክትሰድዮ ዝኽእል መወዳእታ መዓልቲ እዩ።\n\n## ገንዘብ\n**CHF 250.00** ክትኸፍሎ ኣለካ።\n\n## እቲ ቅጫ ኣይትስምዓካ ወይ ሓገዝ እትደሊ እንተኾንካ\nእቲ ቅጫ ጌጋ እንተኾይኑ ክትሓስብ እንተኾንካ፡ ኣብ 10.11.2026 ደብዳቤ ተቓውሞ ክትጽሕፎ ትኽእል ኢኻ። እቲ ሕ",
+    "seconds": 42.7,
+    "critical_facts_preserved": 1.0,
+    "has_structure": true,
+    "expected_script": "ETHIOPIC",
+    "script_share": 0.98,
+    "language_ok": true,
+    "tigrinya_markers": 40,
+    "amharic_markers": 1,
+    "detected": "tigrinya",
+    "chars": 740
+   },
+   "Arabic": {
+    "text": "## ما هي هذه الرسالة؟\nهذه رسالة غرامة رسمية من الشرطة الكانتونية (Polizia cantonale). يقولون إن سيارتك أُوقِفت وهي تتجاوز السرعة المحددة في 14.09.2026. كنت تقود بسرعة 71 كم/ساعة في منطقة السرعة المسموح بها 50 كم/ساعة. وهم يفرضون عليك غرامة قدرها CHF 250.00.\n\n## ما الذي يتعين عليّ فعله؟\nلديك خياران قبل الموعد النهائي في 10.11.2026:\n1. دفع مبلغ الغرامة CHF 250.00.\n2. إذا لم تكن تقود السيارة، أو إذا كنت غير موافق على الغرامة، يجب عليك إرسال اعتراض كتابي (opposizione) في نفس الموعد.\n\n## التواريخ المهمة\nالموعد النهائي هو **10.11.2026**. هذا هو اليوم الأخير لدفع الغرامة أو إرسال اعتراضك.\n\n## المبلغ المالي\nأنت مدين بمبلغ **CHF 250.00**.\n\n## إذا كنت غير موافق أو بحاجة إلى مساعدة\nإذا كنت تعتقد أن الغرامة غير صحيحة، يمكنك كتابة اعتراض بحلول 10.11.2026. إذا كنت غير متأكد من حقوقك أو لا تستطيع الدفع، يرجى طلب مشورة قانونية مجانية محلية. لا تتجاهل هذه الرسالة، إذ قد تتبع إجراءات قانونية إضافية إذا لم تفعل شيئًا.",
+    "seconds": 14.0,
+    "critical_facts_preserved": 1.0,
+    "has_structure": true,
+    "expected_script": "ARABIC",
+    "script_share": 0.985,
+    "language_ok": true,
+    "chars": 912
+   }
+  }
+ }
+]

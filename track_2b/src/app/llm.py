@@ -1,7 +1,7 @@
 """Thin wrapper around an OpenAI-compatible chat endpoint serving Apertus.
 
 Works with the Public AI gateway, a local vLLM / llama.cpp server, or any other
-OpenAI-compatible host: only APERTUS_BASE_URL / APERTUS_MODEL change.
+OpenAI-compatible host: only LLM_BASE_URL / LLM_NAME change.
 """
 
 import json
