@@ -114,7 +114,7 @@ def translate(llm, text: str, language: str) -> str:
         {"role": "system", "content": prompts.TRANSLATE_SYSTEM.format(language=label(language))},
         {"role": "user", "content": text},
     ]
-    return llm.chat(messages, task="translate", temperature=0.0).strip()
+    return llm.chat(messages, task="translate", temperature=0.0, max_tokens=4096).strip()
 
 
 def ask(llm, letter: str, facts: Facts, language: str, question: str, history: list[ChatTurn]) -> str:

@@ -13,7 +13,7 @@ Official letters, explained in your own language. An Apertus-based assistant tha
 
 **Approach.** BriefKlar uses Apertus to extract the letter's facts as JSON (dates, amounts, actions). Code then checks every date and amount against the letter text. Apertus writes an action-oriented explanation, and a separate Apertus call translates it into the user's language. The app also exports deadlines to a calendar, answers follow-up questions and drafts replies.
 
-**Headline result.** ⟨RESULTS⟩
+**Headline result.** On 12 synthetic Swiss letters (DE/FR/IT), Apertus v1.5 70B found **every deadline** and invented **no dates or amounts**. Explanations in English, Ukrainian, Tigrinya and Arabic kept 100% of deadlines and amounts. The main finding concerns language drift. Asked to write Tigrinya directly, Apertus wrote fluent **Amharic** in 9 of 12 cases, which date and amount metrics cannot detect. Writing in English first, then translating with the language named in its own script ("Tigrinya (ትግርኛ)") brought correct-language output to 12 of 12.
 
 ## 2. Architecture
 
@@ -74,7 +74,48 @@ BriefKlar is deployable as **a) on-premise** and **b) air-gapped**, and the same
 
 ## 5. Evaluation
 
-⟨EVAL⟩
+**Tasks.**
+1. *Extraction:* letter → structured facts. Scored against gold labels.
+2. *Explanation:* facts and letter → plain-language explanation in a target language. Scored for (a) being in the requested language, (b) keeping every gold deadline and amount, and (c) following the required 5-section structure. All checks are deterministic code in `src/eval/`.
+
+The language check uses script detection. For Ge'ez script it additionally counts Tigrinya vs. Amharic marker words and the orthographic variant ኣ/አ.
+
+**Runs:** `data/results/runs/run-20261006-142305-pivot.*` and `run-20261006-141428-direct.*` (`apertus-v1.5-70b`, 12 letters × 4 languages).
+
+### 5.1 Extraction
+
+| Setup | Metric | Result |
+|---|---|---|
+| Baseline: regex only (mock model) | date recall / precision | 1.00 / 0.95 |
+| Baseline: regex only (mock model) | amount precision · letter type · action recall | 0.18 · 0.00 · 0.00 |
+| **Apertus 70B + grounding** | deadline recall | **1.00** |
+| | date recall / precision | 0.91 / 1.00 |
+| | amount recall / precision | 0.94 / 1.00 |
+| | letter type accuracy · action recall | 0.92 · 0.98 |
+| | invented dates / amounts (code check) | **0 / 0** |
+| | "no explicit date" trap | passed: no date invented; the 10-day rule is reported as an action |
+
+Regex finds dates but cannot tell which numbers matter, what kind of letter it is, or what to do. Apertus can. The code-level grounding check keeps the model honest on the numbers. The misses were secondary facts only: a permit expiry date, an offence date, a CHF 30 fee and the old rent.
+
+### 5.2 Explanations: direct generation vs. English pivot + translation
+
+| Target language | In requested language: direct | In requested language: **pivot** | Deadlines & amounts kept: direct | Deadlines & amounts kept: **pivot** | Avg. seconds (direct → pivot) |
+|---|---|---|---|---|---|
+| English | 1.00 | 1.00 | 1.00 | 1.00 | 6.3 → 6.4 |
+| Ukrainian | 1.00 | 1.00 | 1.00 | 1.00 | 8.6 → 15.4 |
+| **Tigrinya** | **0.25** | **1.00** | 1.00 | 1.00 | 31.3 → 43.4 |
+| Arabic | 1.00 | 1.00 | 0.91 | 1.00 | 6.1 → 13.7 |
+
+Structure compliance was 1.00 in all cells of the final runs. Extraction takes another ~6 s per letter.
+
+### 5.3 Findings
+
+1. **Silent drift into a related, higher-resource language.** With direct generation, 9 of 12 "Tigrinya" explanations were Amharic: same script, different language. Dates and amounts were all correct, so a fact-only metric gives full marks. A Tigrinya reader would get a polished but partly incomprehensible text. A language check is necessary when evaluating low-resource languages.
+2. **Name the language in its own script.** A translation prompt that said only "Tigrinya" produced Oromo in an early run. Adding the native name, "Tigrinya (ትግርኛ)", gave Tigrinya in every trial. This is now applied to all prompts (`app/languages.py`).
+3. **Pivot plus translation is the default.** It fixes the drift at the cost of one extra call, roughly 2× latency for non-English targets.
+4. **Token cost of Ge'ez script.** A Tigrinya translation of a 1,306-character English text needed 1,919 output tokens. Our initial 1,500-token limit silently truncated 2 of 12 Tigrinya explanations, and one lost its deadline. The client now detects `finish_reason == "length"` and retries with a larger limit. Limits must be sized for the target script, not for English.
+5. **Prompt examples leak.** An example term in the prompt, "(Einsprache)", appeared in an explanation of a letter that never used it. Examples were removed from the prompt.
+6. **Format instructions are followed unevenly.** The model often wrote "November 30, 2026" instead of the requested DD.MM.YYYY. Dates are now rewritten in code.
 
 ## 6. Limitations
 
@@ -83,7 +124,8 @@ BriefKlar is deployable as **a) on-premise** and **b) air-gapped**, and the same
 - **The language check is a heuristic.** Script detection plus Tigrinya/Amharic marker words. Tigrinya outputs have not yet been reviewed by a native speaker.
 - **Q&A and reply drafting generate directly** in the target language. For Tigrinya they may show the same drift as direct explanations (finding 1); they should use the translation step too.
 - **Secondary facts are sometimes missed**, e.g. expiry dates and side fees. Deadlines were always found, but the UI should invite users to check the original letter.
-- **Latency.** Pivot plus translation takes about 2× as long; a Tigrinya explanation took about 40 s.
+- **Latency.** Pivot plus translation takes about 2× as long; a Tigrinya explanation takes about 43 s.
+- **The direct-strategy run used the 1,500-token limit before the truncation fix.** Its language-drift result is unaffected, because drift is visible from the first sentence.
 - **Not legal advice.** The UI says so and flags unverified facts.
 
 ## 7. Reproducibility

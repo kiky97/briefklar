@@ -25,13 +25,21 @@ class ApertusLLM:
         )
 
     def chat(self, messages, task: str = "", temperature=None, max_tokens=None) -> str:
-        resp = self.client.chat.completions.create(
-            model=self.settings.model,
-            messages=messages,
-            temperature=self.settings.temperature if temperature is None else temperature,
-            max_tokens=max_tokens or self.settings.max_tokens,
-        )
-        return resp.choices[0].message.content or ""
+        limit = max_tokens or self.settings.max_tokens
+        for attempt in range(2):
+            resp = self.client.chat.completions.create(
+                model=self.settings.model,
+                messages=messages,
+                temperature=self.settings.temperature if temperature is None else temperature,
+                max_tokens=limit,
+            )
+            choice = resp.choices[0]
+            # Non-Latin scripts cost far more tokens (Tigrinya: ~2 tokens per character), so a
+            # limit sized for English silently cuts translations off. Retry once with more room.
+            if choice.finish_reason != "length" or attempt == 1:
+                return choice.message.content or ""
+            limit = min(limit * 3, 8192)
+        return ""
 
 
 class MockLLM:
