@@ -47,7 +47,8 @@
     <h2>1 · Your letter</h2>
     <textarea id="letter" placeholder="Paste the text of the letter here (German, French, Italian...)"></textarea>
     <div class="row">
-      <input type="file" id="file" accept=".txt,.pdf">
+      <input type="file" id="file" accept=".txt,.pdf" hidden>
+      <button class="secondary" id="fileBtn" type="button">Upload .txt / .pdf</button>
       <button class="secondary" id="sample">Load example</button>
     </div>
     <div class="row">
@@ -148,6 +149,7 @@ function renderFacts(f) {
 }
 
 $("sample").onclick = () => { $("letter").value = SAMPLE; };
+$("fileBtn").onclick = () => $("file").click();
 $("file").onchange = async (e) => {
   const file = e.target.files[0]; if (!file) return;
   const fd = new FormData(); fd.append("file", file);

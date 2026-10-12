@@ -39,7 +39,7 @@ About 270 words of narration, roughly 2 minutes at a calm pace. Each block gives
 
 ## 1:35 – 1:55 · Sovereign deployment
 
-**Show:** the terminal running `make run`, then `docker-compose.yml` with the `apertus` vLLM service visible.
+**Show:** the `Makefile` (the `run` target), then a terminal in `track_2b/` running `docker compose up --build app`, which is exactly what `make run` executes. This machine has no `make`. Run `docker compose down` first so port 8000 is free. Then show `docker-compose.yml` with the `apertus` vLLM service visible.
 
 > BriefKlar runs in Docker with one command. For on-premise use, a counselling office or municipality runs the app and Apertus side by side on its own server, from open weights. Sensitive letters never leave the organisation.
 
