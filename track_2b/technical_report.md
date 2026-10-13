@@ -5,7 +5,7 @@ Official letters, explained in your own language. An Apertus-based assistant tha
 - **Track:** Track 2B — BriefKlar
 - **Event:** Online
 - **Team:** BriefKlar — Shijin Zhou
-- **Demo:** `TODO: link to video`
+- **Demo:** https://drive.google.com/file/d/1DBXR32vJANhjTN8SDkxB2jRnWEVk_y02/view?usp=sharing
 - **Dataset:** https://huggingface.co/datasets/kiki12111/briefklar-swiss-letters
 
 ## 1. Summary

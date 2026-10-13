@@ -10,6 +10,7 @@ cp .env.example .env   # set LLM_API_KEY
 make run               # http://localhost:8000
 ```
 
+- Demo video (2 min): https://drive.google.com/file/d/1DBXR32vJANhjTN8SDkxB2jRnWEVk_y02/view?usp=sharing
 - Technical report: [`track_2b/technical_report.md`](track_2b/technical_report.md)
 - Overview and commands: [`track_2b/docs/OVERVIEW.md`](track_2b/docs/OVERVIEW.md)
 - Dataset (Hugging Face): https://huggingface.co/datasets/kiki12111/briefklar-swiss-letters
