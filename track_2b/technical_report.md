@@ -6,6 +6,7 @@ Official letters, explained in your own language. An Apertus-based assistant tha
 - **Event:** Online
 - **Team:** BriefKlar — Shijin Zhou
 - **Demo:** `TODO: link to video`
+- **Dataset:** https://huggingface.co/datasets/kiki12111/briefklar-swiss-letters
 
 ## 1. Summary
 
@@ -74,6 +75,7 @@ During the hackathon, all results were produced through the Hack Apertus hosted 
 
 - `data/letters.jsonl`: **12 synthetic letters written for this project** (7 German, 3 French, 2 Italian; 9 letter types: tax, fine, residence permit, health insurance, debt collection, employment office, school, housing, social services). They imitate the style of Swiss administrative mail. All names, addresses, institutions and reference numbers are **fictional**, so there is no personal data. Each letter has hand-written gold labels: dates, deadlines, amounts, letter type and required actions. One letter is a deliberate trap: a debt-collection order with only relative deadlines ("within 10 days"), where the correct output contains no date.
 - `data/results/runs/`: the full model responses and scores for every evaluation run.
+- Published on Hugging Face as test cases, model responses and metadata (instance-level licences): https://huggingface.co/datasets/kiki12111/briefklar-swiss-letters
 - License: CC-BY-4.0 (created by the team).
 
 ## 5. Evaluation

@@ -12,6 +12,7 @@ make run               # http://localhost:8000
 
 - Technical report: [`track_2b/technical_report.md`](track_2b/technical_report.md)
 - Overview and commands: [`track_2b/docs/OVERVIEW.md`](track_2b/docs/OVERVIEW.md)
+- Dataset (Hugging Face): https://huggingface.co/datasets/kiki12111/briefklar-swiss-letters
 - Deployment (on-premise / air-gapped / Swiss cloud): [`track_2b/docs/DEPLOYMENT.md`](track_2b/docs/DEPLOYMENT.md)
 
 Built from the [Hack Apertus project template](https://github.com/HackApertus/project-template). Licensed under Apache-2.0 (see `LICENSE`).
