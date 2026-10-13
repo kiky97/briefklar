@@ -142,7 +142,7 @@ Structure compliance was 1.00 in all cells of the final runs. Extraction takes a
 - **Tests:** `make test` (offline, mock model).
 - **Hardware:** any machine with Docker for the hosted-endpoint setup; an NVIDIA GPU with ≥24 GB VRAM for `make run-local` with the 8B model.
 - **Settings:** `apertus-v1.5-70b`, temperature 0 (extraction, translation) / 0.2 (explanation). Max tokens are 1,500 by default and 4,096 for translation; any call cut off by the limit is retried once with a larger limit. The endpoint does not guarantee determinism, so expect small run-to-run variation.
-- **Commit:** `TODO: final commit hash`
+- **Commit:** `d98b49c` on https://github.com/kiky97/briefklar (code verified from a fresh clone with `make test`, `make demo` and `make run`; later commits change only the report)
 
 ## 8. Next steps
 

@@ -33,7 +33,7 @@ configs:
 
 Evaluation data for **BriefKlar** (Hack Apertus 2026, Track 2B). BriefKlar is an Apertus-based assistant that explains Swiss administrative letters to people in their own language.
 
-- Code and technical report: `TODO: GitHub repo URL`
+- Code and technical report: https://github.com/kiky97/briefklar
 - Model evaluated: Apertus v1.5 70B (`apertus-v1.5-70b`)
 
 ## Contents
