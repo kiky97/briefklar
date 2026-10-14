@@ -14,7 +14,7 @@ Official letters, explained in your own language. An Apertus-based assistant tha
 
 **Approach.** BriefKlar uses Apertus to extract the letter's facts as JSON (dates, amounts, actions). Code then checks every date and amount against the letter text. Apertus writes an action-oriented explanation, and a separate Apertus call translates it into the user's language. The app also exports deadlines to a calendar, answers follow-up questions and drafts replies.
 
-**Headline result.** On 12 synthetic Swiss letters (DE/FR/IT), Apertus v1.5 70B found **every deadline** and invented **no dates or amounts**. Explanations in English, Ukrainian, Tigrinya and Arabic kept 100% of deadlines and amounts. The main finding concerns language drift. Asked to write Tigrinya directly, Apertus wrote fluent **Amharic** in 9 of 12 cases, which date and amount metrics cannot detect. Writing in English first, then translating with the language named in its own script ("Tigrinya (ትግርኛ)") brought correct-language output to 12 of 12.
+**Headline result.** On 12 synthetic Swiss letters (DE/FR/IT), Apertus v1.5 70B found **every deadline** and invented **no dates or amounts**. Explanations in English, Ukrainian, Tigrinya and Arabic kept 100% of deadlines and amounts. The main finding concerns language drift. Asked to write Tigrinya directly, Apertus wrote fluent **Amharic** in 9 of 12 cases, which date and amount metrics cannot detect. Writing in English first, then translating with the language named in its own script ("Tigrinya") brought correct-language output to 12 of 12.
 
 ## 2. Architecture
 
