@@ -66,7 +66,7 @@ During the hackathon, all results were produced through the Hack Apertus hosted 
 
 - `prompts.py`: extraction returns a fixed JSON schema and is told never to compute dates ("within 10 days" stays a rule, not a date). The explanation follows a fixed five-section structure at about CEFR A2 level and keeps original official terms in parentheses.
 - `pipeline.py`: JSON is parsed tolerantly (code fences, surrounding prose) with one repair retry. Temperature is 0 for extraction and translation and 0.2 for explanations.
-- `languages.py`: every prompt names the target language natively as well, e.g. "Tigrinya (ትግርኛ)". See finding 2 below.
+- `languages.py`: every prompt names the target language natively as well, e.g. "Tigrinya". See finding 2 below.
 - `grounding.py`: deterministic parsing of DE/FR/IT/EN date formats and Swiss number formats (`2'486.40`, `Fr. 120.–`), plus non-Latin digits.
 
 **Other models:** none. No other LLM was used in the product or in the evaluation. The eval harness can call an optional judge model (`--judge`), but it was **not** used for any result in this report. The language check in the evaluation is a deterministic heuristic, not a model.
