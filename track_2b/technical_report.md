@@ -10,7 +10,7 @@ Official letters, explained in your own language. An Apertus-based assistant tha
 
 ## 1. Summary
 
-**Problem.** Migrants, refugees and other residents who don't read German, French or Italian regularly receive official letters with hard deadlines: tax bills, fines, residence-permit renewals, insurance reminders, debt collection. Missing a deadline costs money or legal standing. Machine translation translates words, but it doesn't say what to do by when, and it is weak in many of the languages these people speak (Tigrinya, Somali, Kurdish, ...).
+**Problem.** Migrants, refugees and other residents who don't read German, French or Italian regularly receive official letters with hard deadlines: tax bills, fines, residence-permit renewals, insurance reminders, debt collection. Missing a deadline costs money or legal standing. Machine translation translates words, but it doesn't say what to do by when, and it is weak in many of the languages these people speak (Tigrinya, Somali, Kurdish.....).
 
 **Approach.** BriefKlar uses Apertus to extract the letter's facts as JSON (dates, amounts, actions). Code then checks every date and amount against the letter text. Apertus writes an action-oriented explanation, and a separate Apertus call translates it into the user's language. The app also exports deadlines to a calendar, answers follow-up questions and drafts replies.
 
