@@ -39,7 +39,7 @@ The app keeps no state and writes no letters to disk. Its only outbound connecti
 
 **Target: a) On-premise.** BriefKlar runs entirely on the organisation's own infrastructure, for example a migrant counselling service, a municipality or a cantonal office, under its own administration:
 
-- **Everything is containerised.** `make run-local` starts two containers on the organisation's own GPU host: the BriefKlar app, and vLLM serving Apertus v1.5 from local weights (`models/apertus`, downloaded once from Hugging Face). Docs: [`docs/DEPLOYMENT.md`](docs/DEPLOYMENT.md).
+- **Everything is containerised.** `make run-local` starts two containers on the organisation's own GPU host: the BriefKlar app, and vLLM serving Apertus v1.5 from local weights (`models/apertus`, downloaded once from Hugging Face). Docs: [`DEPLOYMENT.md`](DEPLOYMENT.md).
 - **Letters never leave the organisation.** The app's only outbound connection is `LLM_BASE_URL`, which on-premise points to the local vLLM container. The web page loads no CDN assets or fonts (a unit test checks this), Swagger UI is off, and no letter is written to disk.
 - **Open weights make this possible.** Apertus can be self-hosted without a licence server or vendor API, so the organisation controls the model version, updates and logs.
 
