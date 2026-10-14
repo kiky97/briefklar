@@ -117,7 +117,7 @@ Structure compliance was 1.00 in all cells of the final runs. Extraction takes a
 ### 5.3 Findings
 
 1. **Silent drift into a related, higher-resource language.** With direct generation, 9 of 12 "Tigrinya" explanations were Amharic: same script, different language. Dates and amounts were all correct, so a fact-only metric gives full marks. A Tigrinya reader would get a polished but partly incomprehensible text. A language check is necessary when evaluating low-resource languages.
-2. **Name the language in its own script.** A translation prompt that said only "Tigrinya" produced Oromo in an early run. Adding the native name, "Tigrinya (ትግርኛ)", gave Tigrinya in every trial. This is now applied to all prompts (`app/languages.py`).
+2. **Name the language in its own script.** A translation prompt that said only "Tigrinya" produced Oromo in an early run. Adding the native name, "Tigrinya", gave Tigrinya in every trial. This is now applied to all prompts (`app/languages.py`).
 3. **Pivot plus translation is the default.** It fixes the drift at the cost of one extra call, roughly 2× latency for non-English targets.
 4. **Token cost of Ge'ez script.** A Tigrinya translation of a 1,306-character English text needed 1,919 output tokens. Our initial 1,500-token limit silently truncated 2 of 12 Tigrinya explanations, and one lost its deadline. The client now detects `finish_reason == "length"` and retries with a larger limit. Limits must be sized for the target script, not for English.
 5. **Prompt examples leak.** An example term in the prompt, "(Einsprache)", appeared in an explanation of a letter that never used it. Examples were removed from the prompt.
